@@ -10,10 +10,60 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_06_13_132623) do
+ActiveRecord::Schema.define(version: 2022_06_13_135852) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "creation_materiels", force: :cascade do |t|
+    t.string "content"
+    t.bigint "creation_id", null: false
+    t.bigint "materiel_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["creation_id"], name: "index_creation_materiels_on_creation_id"
+    t.index ["materiel_id"], name: "index_creation_materiels_on_materiel_id"
+  end
+
+  create_table "creations", force: :cascade do |t|
+    t.string "name"
+    t.integer "longueur"
+    t.integer "largeur"
+    t.string "tissue_type"
+    t.string "video_link"
+    t.string "patron_link"
+    t.string "tagline"
+    t.text "description"
+    t.text "instruction"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "favoris", force: :cascade do |t|
+    t.string "content"
+    t.bigint "user_id", null: false
+    t.bigint "creation_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["creation_id"], name: "index_favoris_on_creation_id"
+    t.index ["user_id"], name: "index_favoris_on_user_id"
+  end
+
+  create_table "materiels", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "user_materiels", force: :cascade do |t|
+    t.string "content"
+    t.bigint "user_id", null: false
+    t.bigint "materiel_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["materiel_id"], name: "index_user_materiels_on_materiel_id"
+    t.index ["user_id"], name: "index_user_materiels_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -23,8 +73,17 @@ ActiveRecord::Schema.define(version: 2022_06_13_132623) do
     t.datetime "remember_created_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "first_name"
+    t.string "last_name"
+    t.string "avatar"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "creation_materiels", "creations"
+  add_foreign_key "creation_materiels", "materiels"
+  add_foreign_key "favoris", "creations"
+  add_foreign_key "favoris", "users"
+  add_foreign_key "user_materiels", "materiels"
+  add_foreign_key "user_materiels", "users"
 end
