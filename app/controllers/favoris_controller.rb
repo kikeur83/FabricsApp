@@ -5,7 +5,7 @@ class FavorisController < ApplicationController
   end
 
   def create
-    @favori = Favori.new(favori)
+    @favori = Favori.new(favori_params)
     @creation = Creation.find(params[:creation_id])
     @favori.user = current_user
     @favori.creation = @creation
