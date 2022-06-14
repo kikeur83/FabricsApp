@@ -15,17 +15,24 @@
           <br>
           <strong><%= favori.creation.tagline %></strong>
           <br>
-          <%#= link_to "Unlock this", creation_path(creation),
+          <%= link_to "delete this favori", favori_path(favori),
             method: :delete, data: { confirm: "Are you sure?" }, class: "" %>
         </li>
       <% end %>
     </ul>
     <%# à sortir sur la page materiel %>
-    <%# add le form de create user_materiel %>
+    <%= simple_form_for(UserMateriel.new) do |f| %>
+      <%= f.association :materiel %>
+      <%= f.submit %>
+    <% end %>
+    <br>
     <ul class="list-group">
       <% current_user.user_materiels.each do |user_materiel| %>
         <li class="list-group-item">
           <h2><strong><%= user_materiel.materiel.name %></strong></h2>
+          <br>
+          <%= link_to "delete this materiel", user_materiel_path(user_materiel),
+            method: :delete, data: { confirm: "Are you sure?" }, class: "" %>
         </li>
       <% end %>
     </ul>
