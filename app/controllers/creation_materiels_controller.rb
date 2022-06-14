@@ -1,0 +1,2 @@
+class CreationMaterielsController < ApplicationController
+end
