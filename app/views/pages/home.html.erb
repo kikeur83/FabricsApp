@@ -1,4 +1,26 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
-  <%= link_to "test creations page show", creations_path%>
-  <%= link_to "test creations page index", creations_path(params[:id])%>
+
+  <%# <%= link_to "test creations page show", creations_path%>
+  <%# <%= link_to "test creations page index", creations_path(params[:id])%>
+<%# <div class="contain-home"> %>
+<div class="banner">
+  <div class="banner-img-btn">
+    <div class="banner-img">
+      <%= image_tag "logo-fabricsapp", class: "logo"%>
+    </div>
+
+    <div class="banner-btn">
+      <a href="#" class="btn-recherche">Rechercher</a>
+    </div>
+  </div>
+</div>
+
+<div class="present">
+  <%= image_tag "chuttes_de_tissus", class: "img-present", size: "374x152"%>
+  <p>Présentation :
+  Bonjour, nous sommes un groupe de quatre étudiants du Wagon Nice et ce site est notre projet de fin de formation. Nous avons pensé que de nos jours il était important de donner de la valeur à toutes les choses qui nous entourents et la valorisation de dechets en fait entièrement partie. En partant de la constatation du manque d’utilisation des chuttes de tissus, nous vous proposons sur ce site de trouver aisément des idées de créations demandant peu de ressources en tissus.
+  Nous vous souhaitons une agréable expérience !</p>
+</div>
+
+  <%# <div class="present-btn"></div>
+  <div class="prensent-tag"></div> %>
+<%# </div> %>

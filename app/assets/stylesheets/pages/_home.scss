@@ -1,8 +1,55 @@
 // Specific CSS for your home-page
-.navbar {
-  width: 100vw;
-  height: 50px;
-  border: red;
-  position: absolute;
+.banner {
+  background-image: url("../../images/carrécarré2.jpg");
+  background-size: cover;
 
+  width: 100vw;
+  height: 500px;
+  text-decoration: none;
+  // display: flex;
+  text-align: center;
+
+
+  position: relative;
+}
+.banner-img-btn {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.banner-btn{
+margin-top: 100px;
+}
+.logo {
+  width: 900px;
+  height: 200px;
+
+}
+
+.btn-recherche {
+  box-shadow:inset 0px 1px 0px 0px #f5978e;
+  background-color:#f24537;
+  border-radius:6px;
+  border:1px solid #d02718;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-family:Arial;
+  font-size:24px;
+  font-weight:bold;
+  padding:16px 54px;
+  text-decoration:none;
+  text-shadow:0px 1px 0px #810e05;
+  // position: relative;
+  // top: 150px;
+  // right: 500px;
+
+}
+.btn-recherche:hover {
+  background-color:#c62d1f;
+  color: white;
 }
