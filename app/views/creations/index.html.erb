@@ -1,23 +1,38 @@
 <h1>creations index</h1>
 <div class="main-container">
-<div style="height: 300px; background-color: red">
-</div>
+  <div style="height: 300px; background-color: red">
+  </div>
 
-<div class="mygrid-3">
-  <% @creations.each do |creation| %>
-  <%= link_to creation_path(creation) do%>
-      <div class="card-trip mb-4">
-        <%# <%= image_tag "#{creation.photo}" %>
-        <div class="card-trip-infos">
-          <div>
-            <h2 style="text-decoration:none;"><%= creation.name %></h2>
-            <p style="text-decoration:none;"><%= creation.tagline %></p>
+  <div class="recherche">
+    <%= form_tag creations_path, method: :get do %>
+      <%= text_field_tag :query_long,
+                      params[:query_long],
+                      class: "form-control",
+                      placeholder: "longueur"%>
+      <%= text_field_tag :query_larg,
+                      params[:query_larg],
+                      class: "form-control",
+                      placeholder: "largeur"%>
+      <%= submit_tag "Search", class: "btn" %>
+      <%# raise %>
+    <% end %>
+  </div>
+
+  <div class="mygrid-3">
+    <% @creations.each do |creation| %>
+      <%= link_to creation_path(creation) do%>
+          <div class="card-trip mb-4">
+            <%# <%= image_tag "#{creation.photo}" %>
+            <div class="card-trip-infos">
+              <div>
+                <h2 style="text-decoration:none;"><%= creation.name %></h2>
+                <p style="text-decoration:none;"><%= creation.tagline %></p>
+              </div>
+              <p><%= creation.longueur %> <%= creation.largeur %></p>
+              <h2 class="card-trip-pricing" style="text-decoration:none;"><%= creation.time %></h2>
+            </div>
           </div>
-          <h2 class="card-trip-pricing" style="text-decoration:none;"><%= creation.time %></h2>
-           </div>
-      </div>
-    <% end %>
-    <% end %>
+        <% end %>
+      <% end %>
+  </div>
 </div>
-</div>
-
