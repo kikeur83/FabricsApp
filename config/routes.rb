@@ -9,6 +9,6 @@ Rails.application.routes.draw do
   resources :creations, only: [:show, :index] do
     resources :favoris, only: [:new, :create]
   end
-
+  resources :user_materiels, only: [:new, :create, :destroy]
   resources :favoris, only: [:destroy]
 end

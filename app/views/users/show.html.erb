@@ -1,0 +1,47 @@
+<div class="">
+  <div class="container user-page">
+    <div>
+      <br>
+      <br>
+      <h1><%= current_user.first_name %> <%= current_user.last_name %></h1>
+      <p><%= current_user.email %></p>
+    </div>
+    <%# à sortir sur la page favoris %>
+    <ul class="list-group">
+      <% current_user.favoris.each do |favori| %>
+        <li class="list-group-item">
+          <h2><strong><%= favori.creation.name %></strong></h2>
+          <%= favori.tissue_type %>
+          <br>
+          <strong><%= favori.creation.tagline %></strong>
+          <br>
+          <%= link_to "delete this favori", favori_path(favori),
+            method: :delete, data: { confirm: "Are you sure?" }, class: "" %>
+        </li>
+      <% end %>
+    </ul>
+    <%# à sortir sur la page materiel %>
+    <%= simple_form_for(UserMateriel.new) do |f| %>
+      <%= f.association :materiel %>
+      <%= f.submit %>
+    <% end %>
+    <br>
+    <ul class="list-group">
+      <% current_user.user_materiels.each do |user_materiel| %>
+        <li class="list-group-item">
+          <h2><strong><%= user_materiel.materiel.name %></strong></h2>
+          <br>
+          <%= link_to "delete this materiel", user_materiel_path(user_materiel),
+            method: :delete, data: { confirm: "Are you sure?" }, class: "" %>
+        </li>
+      <% end %>
+    </ul>
+    <br>
+    <br>
+    <div class="bouton">
+      <a class="bouton-all" href="#">
+        a
+      </a>
+    </div>
+  </div>
+</div>
