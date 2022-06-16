@@ -2,7 +2,6 @@
 .banner {
   background: image-url("banniere-home.png");
   background-size: cover;
-  width: 100vw;
   height: 500px;
   text-decoration: none;
   // display: flex;
@@ -51,6 +50,8 @@ margin-top: 100px;
   color: white;
 }
 
+
+
 .present {
   display: flex;
   justify-content: space-around;
@@ -79,7 +80,6 @@ margin-top: 100px;
 .present4 {
   background: image-url("img-end.png");
   background-size: cover;
-  width: 100vw;
   height: 350px;
   margin-top: 64px;
 }
