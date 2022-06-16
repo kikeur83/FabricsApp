@@ -8,6 +8,22 @@
   <h2>Materials needed</h2>
   <p><%= @creation.name %></p>
   <p><%= @creation.time %></p>
+
+
+  <div style="margin-left: 90%">
+    <% if @fav.nil? %>
+       <%= link_to "FAV",
+            creation_favoris_path(@creation.id),
+            method: :post,
+            class: "btn btn-gradient"%>
+      <% else %>
+      <%= link_to "FAV",
+            favori_path(@fav.id),
+            method: :delete,
+            class: "btn btn-gradient"%>
+            <% end %>
+  <%# <div> <%= @fav.id unless @fav.nil?</div> %>
+
   </div>
 
     <div>

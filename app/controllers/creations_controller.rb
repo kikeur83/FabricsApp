@@ -14,5 +14,6 @@ class CreationsController < ApplicationController
 
   def show
     @creation = Creation.find(params[:id])
+    @fav = Favori.find_by_user_id(current_user.id)
   end
 end
