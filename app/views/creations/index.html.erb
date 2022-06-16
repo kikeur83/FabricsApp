@@ -19,20 +19,16 @@
   </div>
 
   <div class="mygrid-3">
-    <% @creations.each do |creation| %>
-      <%= link_to creation_path(creation) do%>
-          <div class="card-trip mb-4">
-            <%# <%= image_tag "#{creation.photo}" %>
-            <div class="card-trip-infos">
-              <div>
-                <h2 style="text-decoration:none;"><%= creation.name %></h2>
-                <p style="text-decoration:none;"><%= creation.tagline %></p>
-              </div>
-              <p><%= creation.longueur %> <%= creation.largeur %></p>
-              <h2 class="card-trip-pricing" style="text-decoration:none;"><%= creation.time %></h2>
-            </div>
-          </div>
-        <% end %>
+    <% creations_ids = [] %>
+    <% if params[:query_long] && params[:query_larg] && params[:query_long] != "" && params[:query_larg] != "" %>
+      <% @creations.each do |creation| %>
+        <% creations_ids << creation.id %>
       <% end %>
+    <% end %>
+    <% @creations.each do |creation| %>
+
+    <%= render 'shared/card', creation: creation %>
+    <% end %>
+
   </div>
 </div>
