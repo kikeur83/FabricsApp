@@ -14,6 +14,12 @@ class CreationsController < ApplicationController
 
   def show
     @creation = Creation.find(params[:id])
+    @creations = []
+    if params[:creations_ids]
+      params[:creations_ids].each do |id|
+        @creations << Creation.find(id)
+      end
+    end
     @fav = Favori.find_by_user_id(current_user.id)
   end
 end
