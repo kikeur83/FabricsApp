@@ -2,7 +2,6 @@
 
   <%# <%= link_to "test creations page show", creations_path%>
   <%# <%= link_to "test creations page index", creations_path(params[:id])%>
-<%# <div class="contain-home"> %>
 <div class="banner">
   <div class="banner-img-btn">
     <div class="banner-img">
@@ -14,14 +13,49 @@
     </div>
   </div>
 </div>
+<div class="contain-home">
+  <div class="present">
+    <div class="present-img-tissu">
+      <%= image_tag "chuttes_de_tissus", class: "img-present", size: "374x152"%>
+    </div>
+    <div class="present-text">
+      <p>Présentation : <br>
+      Bonjour, nous sommes un groupe de quatre étudiants du Wagon Nice et ce site est notre projet de fin de formation. Nous avons pensé que de nos jours il était important de donner de la valeur à toutes les choses qui nous entourents et la valorisation de dechets en fait entièrement partie. En partant de la constatation du manque d’utilisation des chuttes de tissus, nous vous proposons sur ce site de trouver aisément des idées de créations demandant peu de ressources en tissus.
+      Nous vous souhaitons une agréable expérience !</p>
+    </div>
+  </div>
 
-<div class="present">
-  <%= image_tag "chuttes_de_tissus", class: "img-present", size: "374x152"%>
-  <p>Présentation :
-  Bonjour, nous sommes un groupe de quatre étudiants du Wagon Nice et ce site est notre projet de fin de formation. Nous avons pensé que de nos jours il était important de donner de la valeur à toutes les choses qui nous entourents et la valorisation de dechets en fait entièrement partie. En partant de la constatation du manque d’utilisation des chuttes de tissus, nous vous proposons sur ce site de trouver aisément des idées de créations demandant peu de ressources en tissus.
-  Nous vous souhaitons une agréable expérience !</p>
+  <div class="present2">
+    <div class="present img-couture">
+      <%= image_tag "mesure-couture", class: "img-mesure", size: "374x152"%>
+    </div>
+
+      <%= render 'shared/mon_bouton_recherche' %>
+
+    <div class="present img-coudre">
+      <%= image_tag "machine-a-coudre", class: "img-coudre", size: "374x152"%>
+    </div>
+  </div>
+
+  <div class="present3">
+    <div>
+      <p class="present-text2">Préparez votre tissus pour une prise de mesure facile : découpez votre tissus en forme de rectangle le plus grand possible.
+      Mesurez la longueur et rentrez la mesure en cm dans notre barre de recherche.
+      Effectuez la même étape pour la largeur, le modèle de votre tissus se construit en temps réel !
+      Entrez le type de tissus si vous le souhaitez.
+
+      Voici apparaître des idées de création en utilisant vos chuttes de tissus, la liste de matériel nécessaire pour chaque choix possible, le patron disponible en version téléchargeable, et les conseils et vidéos tutoriels pour vous accompagner !
+      Un jeu d’enfant !
+
+      Un espace personnel vous permet de sauvegarder en favoris vos créations préférées !</p>
+    </div>
+    <div>
+      <%= image_tag "couture.gif", class: "img-gif", size: "613x330"%>
+    </div>
+  </div>
+  <div class="present4">
+  </div>
 </div>
 
   <%# <div class="present-btn"></div>
   <div class="prensent-tag"></div> %>
-<%# </div> %>
