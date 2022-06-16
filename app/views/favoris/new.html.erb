@@ -1,1 +1,18 @@
 <h1>favoris new <h1>
+<div class="container" style="border: 1px solid red">
+    <div class="card-trip mb-4">
+    <%= image_tag "#{creation.photo}"
+    <div class="card-trip-infos">
+        <div>
+        <h2 style="text-decoration:none;"><%= @creation.name %></h2>
+        <p style="text-decoration:none;"><%= @creation.tagline %></p>
+        </div>
+        <p><%= @creation.longueur %> <%= @creation.largeur %></p>
+        <h2 class="card-trip-pricing" style="text-decoration:none;"><%= @creation.time %></h2>
+    </div>
+    <div style="margin-left: 90%">
+        <%= link_to "Start now", "creation_favoris_path", class: "btn btn-gradient" %>
+    </div>
+    </div>
+</div>
+
