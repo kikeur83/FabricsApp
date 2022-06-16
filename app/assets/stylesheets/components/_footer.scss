@@ -1,15 +1,23 @@
 .footer {
-  width: 100vw;
-  height: 110px;
+  height: 72px;
   background-color: #FEB8FC;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  p {
+    margin: 0px;
+  }
 }
 
 .footer-font {
   font-size: 48px;
-  padding-left: 10px;
-  padding-right: 10px;
+  color: white;
+}
 
+.footer-font:hover {
+
+  color: #f24537;
 }
