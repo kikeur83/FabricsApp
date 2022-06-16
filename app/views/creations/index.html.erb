@@ -26,8 +26,9 @@
       <% end %>
     <% end %>
     <% @creations.each do |creation| %>
-
-    <%= render 'shared/card', creation: creation %>
+      <%= link_to creation_path(creation, :creations_ids => creations_ids, :query_long => params[:query_long], :query_larg => params[:query_larg]) do %>
+        <%= render 'shared/card', creation: creation %>
+      <% end %>
     <% end %>
 
   </div>
