@@ -1,0 +1,17 @@
+<%= link_to creation_path(creation) do%>
+  <div class="card">
+    <div class="card-trip mb-4">
+      <%= image_tag "carrécarré.jpg", class: "img-card" %>
+      <div class="card-trip-infos">
+        <div>
+          <h2 style="text-decoration:none;"><%= creation.name %></h2>
+          <p style="text-decoration:none;"><%= creation.tagline %></p>
+        </div>
+        <div class="footer-card">
+          <h2 class="card-trip-pricing" style="text-decoration:none;"><%= creation.time %></h2>
+          <i class="fas fa-history"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>
