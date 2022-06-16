@@ -8,7 +8,7 @@ class CreationsController < ApplicationController
       end
       @creations = Creation.where("longueur <= ? AND largeur <= ?", params[:query_long], params[:query_larg])
     else
-      @creations = Creations.all
+      @creations = Creation.all
     end
   end
 
