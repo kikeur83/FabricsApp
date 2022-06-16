@@ -19,8 +19,16 @@
   </div>
 
   <div class="mygrid-3">
+    <% creations_ids = [] %>
+    <% if params[:query_long] && params[:query_larg] && params[:query_long] != "" && params[:query_larg] != "" %>
+      <% @creations.each do |creation| %>
+        <% creations_ids << creation.id %>
+      <% end %>
+    <% end %>
     <% @creations.each do |creation| %>
+
     <%= render 'shared/card', creation: creation %>
     <% end %>
+
   </div>
 </div>
