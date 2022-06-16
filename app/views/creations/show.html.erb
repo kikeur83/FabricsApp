@@ -1,40 +1,51 @@
 <div class="main-container">
-<div class="picture-container">
-</div>
-
-<div class="mygrid">
-
-  <div>
-  <h2>Materials needed</h2>
-  <p><%= @creation.name %></p>
-  <p><%= @creation.time %></p>
+  <div class="picture-container">
   </div>
+
+  <div class="mygrid">
 
     <div>
-  <h2>Materials needed</h2>
-  <p><%= @creation.name %></p>
+      <h2>Materials needed</h2>
+      <p><%= @creation.name %></p>
+      <p><%= @creation.time %></p>
+    </div>
+
+    <div>
+      <h2>Materials needed</h2>
+      <p><%= @creation.name %></p>
+    </div>
+
+    <div>
+      <h2>Materials needed</h2>
+      <p><%= @creation.name %></p>
+    </div>
+
+    <div>
+      <h2>Materials needed</h2>
+      <p><%= @creation.name %></p>
+    </div>
+
+    <div>
+      <h2>Materials needed</h2>
+      <p><%= @creation.name %></p>
+    </div>
+
+    <div>
+      <h2>Materials needed</h2>
+      <p><%= @creation.name %></p>
+    </div>
+
   </div>
 
   <div>
-  <h2>Materials needed</h2>
-  <p><%= @creation.name %></p>
+    <% @creations.each do |creation| %>
+      <% if creation.id != @creation.id %>
+        <%# alors ça ça devra être une card de creation %>
+        <%= creation.name %>
+        <br>
+      <% end %>
+    <% end %>
   </div>
 
-    <div>
-  <h2>Materials needed</h2>
-  <p><%= @creation.name %></p>
-  </div>
-
-  <div>
-  <h2>Materials needed</h2>
-  <p><%= @creation.name %></p>
-  </div>
-
-    <div>
-  <h2>Materials needed</h2>
-  <p><%= @creation.name %></p>
-  </div>
-
-
-</div>
+  <%= link_to "Back to Index", creations_path(:query_long => params[:query_long], :query_larg => params[:query_larg]) %>
 </div>

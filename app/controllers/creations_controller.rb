@@ -14,5 +14,11 @@ class CreationsController < ApplicationController
 
   def show
     @creation = Creation.find(params[:id])
+    @creations = []
+    if params[:creations_ids]
+      params[:creations_ids].each do |id|
+        @creations << Creation.find(id)
+      end
+    end
   end
 end
