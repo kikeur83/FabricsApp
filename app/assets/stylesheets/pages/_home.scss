@@ -1,15 +1,12 @@
 // Specific CSS for your home-page
 .banner {
-  background-image: url("../../images/carrécarré2.jpg");
+  background: image-url("banniere-home.png");
   background-size: cover;
-
   width: 100vw;
   height: 500px;
   text-decoration: none;
   // display: flex;
   text-align: center;
-
-
   position: relative;
 }
 .banner-img-btn {
@@ -52,4 +49,45 @@ margin-top: 100px;
 .btn-recherche:hover {
   background-color:#c62d1f;
   color: white;
+}
+
+.present {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  align-items: center;
+}
+
+.present2 {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  align-items: center;
+}
+
+.present3 {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  align-items: center;
+}
+
+
+.present4 {
+  background: image-url("img-end.png");
+  background-size: cover;
+  width: 100vw;
+  height: 350px;
+  margin-top: 64px;
+}
+
+.present-text {
+  width: 50%;
+}
+
+.present-text2 {
+  width: 517px;
 }
