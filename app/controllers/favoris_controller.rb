@@ -15,10 +15,13 @@ class FavorisController < ApplicationController
     @creation = Creation.find(params[:creation_id])
     @favori.user = current_user
     @favori.creation = @creation
-    @favori.save ? (creations_path(@creation)) : (render :new)
+    @favories = Favori.find_by_user_id(current_user.id)
+
+   redirect_to creations_path(@creation.id) if  @favori.save
   end
 
   def destroy
+
     @favori = Favori.find(params[:id])
     @favori.destroy
    redirect_to creations_path
