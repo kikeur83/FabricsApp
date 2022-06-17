@@ -56,7 +56,9 @@
   </div>
 
   <div>
-    <%= link_to "My PDF", asset_path(@creation.patron_link), target: :_blank %>
+    <%= link_to "patron link", asset_path(@creation.patron_link), target: :_blank %>
+    <br>
+    <%= link_to "notice link", asset_path(@creation.notice_pdf), target: :_blank %>
   </div>
 
   <div>
