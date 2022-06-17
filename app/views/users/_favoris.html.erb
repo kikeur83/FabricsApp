@@ -1,20 +1,22 @@
 <div class="user-page-modal favoris d-none">
 <div class="mygrid">
+
+<% @userfav.each do |item| %>
 <div class="card">
     <div class="card-trip mb-4">
       <%= image_tag "carrécarré.jpg", class: "img-card" %>
       <div class="card-trip-infos">
         <div>
-          <h2 style="text-decoration:none;"><%= @creation.name %></h2>
-          <p style="text-decoration:none;"><%= @creation.tagline %></p>
+          <h2 style="text-decoration:none;"><%= item.name %></h2>
+          <p style="text-decoration:none;"><%= item.tagline %></p>
         </div>
          <div style="margin-left: 90%">
-    <% if !@fav_exist %>
-       <%= link_to "FAV",
+    <%# <% if !@fav_exist %>
+       <%# <%= link_to "FAV",
             creation_favoris_path(@creation.id),
             method: :post,
             class: "btn btn-gradient"%>
-      <% else %>
+      <%# <% else %>
       <%= link_to "NoFAV",
             favori_path(@fav[0]),
             method: :delete,
