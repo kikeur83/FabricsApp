@@ -1,20 +1,65 @@
-.card {
+.visite-index {
   background-color:#F5D8D8;
-  color: black;
-  height: 448px;
+  // height: 500px;
   width: 377px;
 
+
 }
 
-.footer-card {
+
+.description-index {
+  text-align: center;
+  color: black;
+  height: 200px;
+  margin-left: 10px;
+  margin-right: 10px;
+
+h2 {
+  font-size: 48px;
+}
+
+p {
+  font-size: 16px;
+}
+
+}
+
+
+.footer-visite {
   display: flex;
   justify-content: space-between;
+  font-size: 32px;
+  align-items: center;
+  color: black;
+
 }
-.card-time {
+
+.timer-visite{
+  width: 50%;
   display: flex;
+  margin-left: 16px;
+}
+.icon-visite {
+  margin-right: 16px;
 }
 
+.fa-history:before {
+font-size: 24px;
+}
+.fa-heart {
+  color: white;
+  margin-right: 4px;
+}
+.fa-heart:hover {
+  color: red;
+}
+.fa-share-alt{
+  color: white;
+}
 
+.fa-share-alt:hover{
+  color: red;
+}
 // .card-img-card {
 //   max-height: 40%;
 // }
