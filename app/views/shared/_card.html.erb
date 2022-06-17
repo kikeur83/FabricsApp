@@ -1,21 +1,23 @@
-  <div class="card">
-    <div class="card-trip mb-4">
-      <%= image_tag "carrécarré.jpg", class: "img-card", size: "376x200"%>
-      <div class="card-trip-infos">
-        <div>
-          <h2 style="text-decoration:none;"><%= creation.name %></h2>
-          <p style="text-decoration:none;"><%= creation.tagline %></p>
-        </div>
+
+<div class="visite-index">
+  <div class="img-visite">
+    <%= image_tag creation.photos[0], class: "img-card", size: "377x280"%>
+  </div>
+  <div class="description-index">
+    <h2 style="text-decoration:none;"><%= creation.name %></h2><br>
+    <p style="text-decoration:none;"><%= creation.tagline %></p>
+  </div>
 
 
-        <div class="footer-card">
-          <div class="card-time">
-          <i class="fas fa-history"></i>
-          <h2 class="card-trip-pricing" style="text-decoration:none;"><%= creation.time %>&nbspHeure(s)</h2>
-          </div>
-          <i class="fas fa-heart"></i>
-          <i class="fas fa-share-alt">&nbspShare</i>
-        </div>
-      </div>
+
+  <div class="footer-visite">
+    <div class="timer-visite">
+      <i class="fas fa-history">&nbsp</i>
+      <h2 class="footer-time" style="text-decoration:none;"><%= creation.time %>&nbspHeure(s)</h2>
+    </div>
+    <div class="icon-visite">
+      <i class="fas fa-heart"></i>
+      <i class="fas fa-share-alt"></i>
     </div>
   </div>
+</div>
