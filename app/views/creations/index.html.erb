@@ -18,6 +18,34 @@
     <% end %>
   </div>
 
+  <div class="visual">
+    <h2 id="longueur">longueur</h2>
+    <br>
+    <br>
+    <br>
+    <h2 id="largeur">l</h2>
+    <h2 id="largeur">a</h2>
+    <h2 id="largeur">r</h2>
+    <h2 id="largeur">g</h2>
+    <h2 id="largeur">e</h2>
+    <h2 id="largeur">u</h2>
+    <h2 id="largeur">r</h2>
+    <div class="rectangle">
+      <% if params[:query_long] && params[:query_larg] && params[:query_long] != "" && params[:query_larg] != "" %>
+        <h2 id="longueur"><%= params[:query_long] %> cm</h2>
+        <br>
+        <% (0...(3 - params[:query_larg].length)).each do |i| %>
+          <br>
+        <% end %>
+        <% (0...params[:query_larg].length).each do |i| %>
+          <h2 id="largeur"><%= params[:query_larg][i].to_i %></h2>
+        <% end %>
+        <h2 id="largeur">c</h2>
+        <h2 id="largeur">m</h2>
+      <% end %>
+    </div>
+  </div>
+
   <div class="mygrid-3">
     <% creations_ids = [] %>
     <% if params[:query_long] && params[:query_larg] && params[:query_long] != "" && params[:query_larg] != "" %>
@@ -25,9 +53,13 @@
         <% creations_ids << creation.id %>
       <% end %>
     <% end %>
-    <% @creations.each do |creation| %>
-      <%= link_to creation_path(creation, :creations_ids => creations_ids, :query_long => params[:query_long], :query_larg => params[:query_larg]) do %>
-        <%= render 'shared/card', creation: creation %>
+    <% if @creations == [] %>
+      <h1>No match found</h1>
+    <% else %>
+      <% @creations.each do |creation| %>
+        <%= link_to creation_path(creation, :creations_ids => creations_ids, :query_long => params[:query_long], :query_larg => params[:query_larg]) do %>
+          <%= render 'shared/card', creation: creation %>
+        <% end %>
       <% end %>
     <% end %>
 
