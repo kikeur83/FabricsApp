@@ -3,3 +3,31 @@
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 15px;
 }
+
+
+.visual {
+  position: relative;
+  padding: 20px;
+  margin: 20px;
+  height: 500px;
+  width: 500px;
+  background-color: gray;
+  #largeur {
+    text-align: start;
+  }
+  h2 {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.rectangle {
+  position: absolute;
+  padding: 10px;
+  height: 65%;
+  width: 65%;
+  left: 20%;
+  top: 20%;
+  background-color: red;
+}
+

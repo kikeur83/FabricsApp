@@ -12,19 +12,17 @@
 
 
   <div style="margin-left: 90%">
-    <% if @fav.nil? %>
+    <% if !@fav_exist %>
        <%= link_to "FAV",
             creation_favoris_path(@creation.id),
             method: :post,
             class: "btn btn-gradient"%>
       <% else %>
-      <%= link_to "FAV",
-            favori_path(@fav.id),
+      <%= link_to "NoFAV",
+            favori_path(@fav[0]),
             method: :delete,
             class: "btn btn-gradient"%>
             <% end %>
-  <%# <div> <%= @fav.id unless @fav.nil?</div> %>
-
   </div>
 
 
@@ -56,7 +54,9 @@
   </div>
 
   <div>
-    <%= link_to "My PDF", asset_path(@creation.patron_link), target: :_blank %>
+    <%= link_to "patron link", asset_path(@creation.patron_link), target: :_blank %>
+    <br>
+    <%= link_to "notice link", asset_path(@creation.notice_pdf), target: :_blank %>
   </div>
 
   <div>
