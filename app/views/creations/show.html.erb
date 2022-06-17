@@ -56,8 +56,7 @@
   </div>
 
   <div>
-    <%# passer les differents liens dans les models, mettre les pdf dans les assets/images et remplacer par @creation.pdf_path %>
-    <%= link_to "My PDF", asset_path("Tutoriel-de-Louise-chouchou-noeud-texte-patron.pdf"), target: :_blank %>
+    <%= link_to "My PDF", asset_path(@creation.patron_link), target: :_blank %>
   </div>
 
   <div>
