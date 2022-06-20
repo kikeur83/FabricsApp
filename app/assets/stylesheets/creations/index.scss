@@ -3,6 +3,15 @@
   padding: 20px;
 }
 
+.banner-index {
+  width: 100%;
+  height: 400px;
+  background: image-url("mdc.jpg");
+  background-size: cover;
+
+}
+
+
 .recherche {
   display: flex;
   justify-content: space-around;
@@ -20,6 +29,7 @@
   margin-bottom: 70px;
 
 }
+
 
 .visual {
   position: relative;
