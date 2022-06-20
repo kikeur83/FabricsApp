@@ -69,3 +69,4 @@ gem 'dotenv-rails', groups: [:development, :test]
 
 gem 'cloudinary', '~> 1.16.0'
 # CLOUDINARY_URL=cloudinary://115732374879588:32aDhtMM6I9aLBO6nSpnFdNo-kg
+gem 'acts_as_favoritor'
