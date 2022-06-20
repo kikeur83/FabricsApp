@@ -1,9 +1,10 @@
 .main-container{
 width: 100%;
 min-height: 100vh;
-align-items: flex-start;
-justify-content: flex;
+// align-items: flex-start;
+// justify-content: flex;
 text-align: center;
+background-color:#FFFCFC;
 }
 
 
@@ -12,15 +13,76 @@ text-align: center;
 width: 100%;
 background-image: url(carrécarré.jpg);
 object-fit: cover;
-height: 300px;
+height: 473px;
 display: flex;
 align-items: center;
 justify-content: flex-end;
 text-align: center;
 }
 
-.mygrid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 15px;
+.title {
+  color: black;
+  text-align: center;
+  height: 80px;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  h1 {
+    font-size: 64px;
+
 }
+}
+.patron {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 24px;
+}
+
+.tag-description {
+
+  min-height: 100px;
+  text-align: center;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.engloble-tag{
+  width: 50%;
+  background-color: #f5d8d8;
+}
+.tag-description p {
+
+}
+
+.notice {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 24px;
+}
+
+// #list-materiels{
+//   flex-direction: column;
+// }
+
+
+
+// .mygrid {
+  //     display: grid;
+  //     grid-template-columns: 1fr 1fr;
+//     grid-gap: 15px;
+// }
+  // .contain-show {
+  //   display: flex;
+  //   justify-content: space-around;
+  //   text-align: center;
+  //   align-items: center;
+  //   border: 1px solid red;
+  // }
+  // .materiels {
+  //   width: 30%;
+  //   min-height: 230px;
+  //   background-color: #f5d8d8;
+  // }
