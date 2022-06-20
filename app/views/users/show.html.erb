@@ -1,25 +1,21 @@
 
-<div class="container user-page">
+<div class="main-container">
   <div style="height:300px; border:1px solid green; margin-bottom:5px">
     <h1>This is the banner</h1>
   </div>
 
     <div class="d-flex justify-content-between">
-      <div class="d-flex flex-column" style="width: 15%; border:1px solid red">
+      <div class="d-flex flex-column" style="width: 15%">
         <%= link_to "Profile" , "#", class: "btn btn-gradient btnlinks" %>
         <%= link_to "Favoris", "#", class: "btn btn-gradient btnlinks" %>
         <%= link_to "Creations", "#", class: "btn btn-gradient btnlinks" %>
         <%= link_to "Materiels", "#", class: "btn btn-gradient btnlinks" %>
       </div>
-      <div class="d-flex" style="width: 85%; height: 100vh; margin-left:16px; border:1px solid red">
-
-        <%= render "favoris" %>
+      <div class="d-flex" style="width: 85%; min-height: 100vh; margin-left:16px">
         <%= render "profile" %>
+        <%= render "favoris" %>
         <%= render "materiels" %>
-
-
       </div>
 
     </div>
-
   </div>
