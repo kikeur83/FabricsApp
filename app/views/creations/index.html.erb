@@ -1,67 +1,75 @@
-<h1>creations index</h1>
-<div class="main-container">
-  <div style="height: 300px; background-color: red">
-  </div>
-
+<div class="index-container">
   <div class="recherche">
-    <%= form_tag creations_path, method: :get do %>
-      <%= text_field_tag :query_long,
-                      params[:query_long],
-                      class: "form-control",
-                      placeholder: "longueur"%>
-      <%= text_field_tag :query_larg,
-                      params[:query_larg],
-                      class: "form-control",
-                      placeholder: "largeur"%>
-      <%= submit_tag "Search", class: "btn" %>
-      <%# raise %>
-    <% end %>
-  </div>
+    <div class="form-recherche">
+      <div class="titres">
+        <h2>Bienvenue sur notre</h2>
+        <h1>Outil de recherche</h1>
+      </div>
+      <p>Entrez les dimensions de votre chute en cm</p>
 
-  <div class="visual">
-    <h2 id="longueur">longueur</h2>
-    <br>
-    <br>
-    <br>
-    <h2 id="largeur">l</h2>
-    <h2 id="largeur">a</h2>
-    <h2 id="largeur">r</h2>
-    <h2 id="largeur">g</h2>
-    <h2 id="largeur">e</h2>
-    <h2 id="largeur">u</h2>
-    <h2 id="largeur">r</h2>
-    <div class="rectangle">
-      <% if params[:query_long] && params[:query_larg] && params[:query_long] != "" && params[:query_larg] != "" %>
-        <h2 id="longueur"><%= params[:query_long] %> cm</h2>
-        <br>
-        <% (0...(3 - params[:query_larg].length)).each do |i| %>
+      <div class="recherche">
+        <%= form_tag creations_path, method: :get do %>
+          <%= text_field_tag :query_long,
+                          params[:query_long],
+                          class: "form-control",
+                          placeholder: "longueur" %>
           <br>
+          <%= text_field_tag :query_larg,
+                          params[:query_larg],
+                          class: "form-control",
+                          placeholder: "largeur" %>
+          <br>
+          <br>
+          <%= submit_tag "Rechercher", class: "btn-recherche" %>
         <% end %>
-        <% (0...params[:query_larg].length).each do |i| %>
-          <h2 id="largeur"><%= params[:query_larg][i].to_i %></h2>
+      </div>
+    </div>
+    <div class="visual">
+      <h2 id="longueur">longueur</h2>
+      <br>
+      <br>
+      <br>
+      <h2 id="largeur">l</h2>
+      <h2 id="largeur">a</h2>
+      <h2 id="largeur">r</h2>
+      <h2 id="largeur">g</h2>
+      <h2 id="largeur">e</h2>
+      <h2 id="largeur">u</h2>
+      <h2 id="largeur">r</h2>
+      <div class="rectangle">
+        <% if params[:query_long] && params[:query_larg] && params[:query_long] != "" && params[:query_larg] != "" %>
+          <h2 id="longueur"><%= params[:query_long] %> cm</h2>
+          <br>
+          <% (0...(3 - params[:query_larg].length)).each do |i| %>
+            <br>
+          <% end %>
+          <% (0...params[:query_larg].length).each do |i| %>
+            <h2 id="largeur"><%= params[:query_larg][i].to_i %></h2>
+          <% end %>
+          <h2 id="largeur">c</h2>
+          <h2 id="largeur">m</h2>
         <% end %>
-        <h2 id="largeur">c</h2>
-        <h2 id="largeur">m</h2>
-      <% end %>
+      </div>
     </div>
   </div>
 
-  <div class="mygrid-3">
-    <% creations_ids = [] %>
-    <% if params[:query_long] && params[:query_larg] && params[:query_long] != "" && params[:query_larg] != "" %>
-      <% @creations.each do |creation| %>
-        <% creations_ids << creation.id %>
-      <% end %>
-    <% end %>
-    <% if @creations == [] %>
-      <h1>No match found</h1>
-    <% else %>
-      <% @creations.each do |creation| %>
-        <%= link_to creation_path(creation, :creations_ids => creations_ids, :query_long => params[:query_long], :query_larg => params[:query_larg]) do %>
-          <%= render 'shared/card', creation: creation %>
+  <div class="card-container">
+    <%# <div class="mygrid-3"> %>
+      <% creations_ids = [] %>
+      <% if params[:query_long] && params[:query_larg] && params[:query_long] != "" && params[:query_larg] != "" %>
+        <% @creations.each do |creation| %>
+          <% creations_ids << creation.id %>
         <% end %>
       <% end %>
-    <% end %>
-
+      <% if @creations == [] %>
+        <h1>No match found</h1>
+      <% else %>
+        <% @creations.each do |creation| %>
+          <%= link_to creation_path(creation, :creations_ids => creations_ids, :query_long => params[:query_long], :query_larg => params[:query_larg]) do %>
+            <%= render 'shared/card', creation: creation %>
+          <% end %>
+        <% end %>
+      <% end %>
+    <%# </div> %>
   </div>
 </div>
