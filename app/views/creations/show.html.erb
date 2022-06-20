@@ -1,62 +1,68 @@
 <div class="main-container">
   <div class="picture-container">
   </div>
-
-  <div class="mygrid">
-
-
-  <div>
-  <h2>Materials needed</h2>
-  <p><%= @creation.name %></p>
-  <p><%= @creation.time %></p>
-
-
-  <div style="margin-left: 90%">
-    <% if !@fav_exist %>
-       <%= link_to "FAV",
-            creation_favoris_path(@creation.id),
-            method: :post,
-            class: "btn btn-gradient"%>
-      <% else %>
-      <%= link_to "NoFAV",
-            favori_path(@fav[0]),
-            method: :delete,
-            class: "btn btn-gradient"%>
-            <% end %>
+  <div class="title">
+  <h1><%= @creation.name %></h1>
+  <p>Temps de réalisation: <%= @creation.time %>Heure(s)</p>
   </div>
 
-
-    <div>
-      <h2>Materials needed</h2>
-      <p><%= @creation.name %></p>
+  <div class="patron">
+    <div class="mon-bouton-recherche">
+      <%= link_to "patron link", asset_path(@creation.patron_link), target: :_blank %>
     </div>
-
-    <div>
-      <h2>Materials needed</h2>
-      <p><%= @creation.name %></p>
-    </div>
-
-    <div>
-      <h2>Materials needed</h2>
-      <p><%= @creation.name %></p>
-    </div>
-
-    <div>
-      <h2>Materials needed</h2>
-      <p><%= @creation.name %></p>
-    </div>
-
-    <div>
-      <h2>Materials needed</h2>
-      <p><%= @creation.name %></p>
-    </div>
-
   </div>
 
-  <div>
-    <%= link_to "patron link", asset_path(@creation.patron_link), target: :_blank %>
-    <br>
-    <%= link_to "notice link", asset_path(@creation.notice_pdf), target: :_blank %>
+  <div class="tag-description">
+    <div class="engloble-tag">
+      <p style="text-decoration:none;"><%= @creation.tagline %></p>
+      <p style="text-decoration:none;"><%= @creation.description %></p>
+    </div>
+  </div>
+
+    <div style="margin-left: 90%">
+      <% if !@fav_exist %>
+        <%= link_to "FAV",
+              creation_favoris_path(@creation.id),
+              method: :post,
+              class: "btn btn-gradient"%>
+        <% else %>
+        <%= link_to "NoFAV",
+              favori_path(@fav[0]),
+              method: :delete,
+              class: "btn btn-gradient"%>
+              <% end %>
+    </div>
+
+
+    <%# <div> %>
+      <%# <h2>Materials needed</h2> %>
+      <%# <p><%= @creation.name</p> %>
+    <%# </div> %>
+
+    <%# <div>
+      <h2>Materials needed</h2>
+      <p><%= @creation.name</p> %>
+    <%# </div> %>
+
+    <%# <div>
+      <h2>Materials needed</h2>
+      <p><%= @creation.name</p> %>
+    <%# </div> %>
+
+    <%# <div>
+      <h2>Materials needed</h2>
+      <p><%= @creation.name %></p>
+    <%# </div> %>
+<%#  %>
+    <%# <div> %>
+      <%# <h2>Materials needed</h2> %>
+      <%# <p><%= @creation.name %></p>
+    <%# </div> %>
+
+  <%# </div> %>
+
+
+
   </div>
 
   <div>
@@ -67,6 +73,11 @@
         <br>
       <% end %>
     <% end %>
+  </div>
+  <div class="notice">
+    <div class="mon-bouton-recherche">
+      <%= link_to "notice link", asset_path(@creation.notice_pdf), target: :_blank %>
+    </div>
   </div>
 
   <%= link_to "Back to Index", creations_path(:query_long => params[:query_long], :query_larg => params[:query_larg]) %>
