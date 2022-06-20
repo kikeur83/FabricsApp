@@ -43,19 +43,39 @@ text-align: center;
 
   min-height: 100px;
   text-align: center;
-
   display: flex;
   justify-content: center;
-  flex-direction: column;
+  margin-top: 48px;
 }
 
 .engloble-tag{
   width: 50%;
   background-color: #f5d8d8;
+  border: 1px solid #f5d8d8;
+  border-radius: 4px;
+  padding: 16px 16px;
 
 }
-.tag-description p {
+// .mygrid-3 {
+//     display: grid;
+//     grid-template-columns: 1fr 1fr 1fr;
+//     grid-gap: 15px;
+// }
 
+
+.display-img-show {
+  display: flex;
+  min-height: 300px;
+  width: 100%;
+  margin-top: 28px;
+  gap: 16px;
+  padding: 0px 16px;
+  background-size: cover;
+
+
+}
+.item {
+  flex-grow: 1;
 }
 
 .notice {
