@@ -1,7 +1,9 @@
 class Creation < ApplicationRecord
   acts_as_favoritable
   has_many_attached :photos
+
   # has_many :favoris, dependent: :destroy
+
   has_many :creation_materiels, dependent: :destroy
 
   validates :name, presence: true
