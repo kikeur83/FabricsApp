@@ -14,12 +14,8 @@
       <h2 class="footer-time" style="text-decoration:none;"><%= creation.time %>&nbspHeure(s)</h2>
     </div>
     <div class="icon-visite">
-      <a href="/">
-        <i class="fas fa-heart"></i>
-      </a>
-      <a href="#">
-        <i class="fas fa-share-alt"></i>
-      </a>
+      <%= render 'shared/like_button', creation: creation %>
+
     </div>
   </div>
 </div>

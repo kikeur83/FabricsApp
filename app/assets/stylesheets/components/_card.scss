@@ -42,25 +42,35 @@ p {
 }
 .icon-visite {
   margin-right: 16px;
+lor: red;}
+
+.red{
+  .fa-heart{
+    color: red!important;
+  }
 }
 
-.fa-history:before {
-font-size: 24px;
-}
 .fa-heart {
-  color: white;
-  margin-right: 4px;
-}
-.fa-heart:hover {
-  color: red;
-}
-.fa-share-alt{
-  color: white;
+  color: black;
 }
 
-.fa-share-alt:hover{
-  color: red;
-}
+// .fa-history:before {
+// font-size: 24px;
+// }
+// .fa-heart {
+//   color: white;
+//   margin-right: 4px;
+// }
+// .fa-heart:hover {
+//   color: red;
+// }
+// .fa-share-alt{
+//   color: white;
+// }
+
+// .fa-share-alt:hover{
+//   co
+// }
 // .card-img-card {
 //   max-height: 40%;
 // }

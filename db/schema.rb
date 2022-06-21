@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_06_20_100003) do
+ActiveRecord::Schema.define(version: 2022_06_21_140003) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -69,16 +69,6 @@ ActiveRecord::Schema.define(version: 2022_06_20_100003) do
     t.string "notice_pdf"
   end
 
-  create_table "favoris", force: :cascade do |t|
-    t.string "content"
-    t.bigint "user_id", null: false
-    t.bigint "creation_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["creation_id"], name: "index_favoris_on_creation_id"
-    t.index ["user_id"], name: "index_favoris_on_user_id"
-  end
-
   create_table "favorites", force: :cascade do |t|
     t.string "favoritable_type", null: false
     t.bigint "favoritable_id", null: false
@@ -132,8 +122,6 @@ ActiveRecord::Schema.define(version: 2022_06_20_100003) do
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "creation_materiels", "creations"
   add_foreign_key "creation_materiels", "materiels"
-  add_foreign_key "favoris", "creations"
-  add_foreign_key "favoris", "users"
   add_foreign_key "user_materiels", "materiels"
   add_foreign_key "user_materiels", "users"
 end

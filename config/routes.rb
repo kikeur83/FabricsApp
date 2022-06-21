@@ -7,8 +7,11 @@ Rails.application.routes.draw do
   get "users", to: "users#show"
 
   resources :creations, only: [:show, :index] do
-    resources :favoris, only: [:new, :create]
+    member do
+      post 'toggle_favorite', to: "creations#toggle_favorite"
+    end
   end
+
   resources :user_materiels, only: [:new, :create, :destroy]
-  resources :favoris, only: [:destroy]
+
 end

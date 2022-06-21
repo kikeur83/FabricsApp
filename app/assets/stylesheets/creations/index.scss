@@ -33,35 +33,72 @@
 
 .visual {
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
   padding: 20px;
   margin: 20px;
   height: 500px;
   width: 500px;
-  background-color: gray;
-  #largeur {
-    text-align: start;
-  }
+  background-color: #f5d8d8b7;
+  // #largeur {
+  //   text-align: start;
+  // }
   h2 {
-    text-align: center;
+    // text-align: center;
     padding: 0;
     margin: 0;
   }
 }
 
-.rectangle {
+.longueur {
   position: absolute;
+  top: 3%;
+  left: 50%;
+  transform: translate(-49px, 0);
+}
+
+.largeur {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  transform: translate(0, -135px);
+}
+
+.rectangle {
+  position: relative;
   padding: 10px;
-  height: 65%;
-  width: 65%;
-  left: 20%;
-  top: 20%;
-  background-color: red;
+  height: 75%;
+  width: 75%;
+  border-radius: 4px;
+  // background-color: #FFB8FC;
+  background-image: repeating-linear-gradient(45deg, #FFB8FC, #FFB8FC 15px, #F5D8D8 15px, #F5D8D8 20px);
+  h3 {
+    // text-align: center;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+#longueur {
+  position: absolute;
+  top: 3%;
+  left: 50%;
+  transform: translate(-23px, 0);
+}
+
+#largeur {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  transform: translate(0, -17px);
 }
 
 .card-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-evenly;
   gap: 30px 30px;
   margin-top: 50px;
   margin-bottom: 50px;

@@ -44,16 +44,16 @@ foulard_chouchou.photos.attach(io: notice7, filename: 'foulard_chouchou_notice7.
 puts "#{Creation.count} creations created"
 
 doudou_lapin = Creation.create!(name: 'Doudou lapin', longueur: 60, largeur: 40, tissue_type: "", video_link: "test link", patron_link: "pdf/patrons/doudou_lapin_patron.pdf", notice_pdf: "pdf/notices/doudou_lapin_notice.pdf", tagline: "Le lapin le plus mignon et le plus doux depuis que les doudous existent !", description:"Les doudous font partie des premiers jouets et procurent un sentiment rassurant de sécurité. Notre doudou lapin peut être cousu de manière typique en tissu peluche, mais aussi en polaire ou en tissu nid d’abeille.", instruction: "Avec un patch ou une broderie, le doudou devient un cadeau individuel et très spécial.", time: 3)
-file1 = URI.open('https://res.cloudinary.com/wagui/image/upload/v1655373483/FabricsApp/Doudou_lapin/doudou_lapin_photo_1_m3oxfv.webp')
+file1 = URI.open('https://res.cloudinary.com/wagui/image/upload/v1655817123/FabricsApp/Doudou_lapin/doudou_lapin_photo_1_m3oxfv.webp')
 doudou_lapin.photos.attach(io: file1, filename: 'doudou_lapin.webp', content_type: 'image/webp')
-file2 = URI.open('https://res.cloudinary.com/wagui/image/upload/v1655373483/FabricsApp/Doudou_lapin/doudou_lapin_photo_2_kmylle.webp')
-doudou_lapin.photos.attach(io: file2, filename: 'doudou_lapin2.webp', content_type: 'image/webp')
-file3 = URI.open('https://res.cloudinary.com/wagui/image/upload/v1655373483/FabricsApp/Doudou_lapin/doudou_lapin_photo_3_vzyxcu.webp')
+file2 = URI.open('https://res.cloudinary.com/wagui/image/upload/v1655796598/FabricsApp/Doudou_lapin/doudou_lapin_photo_6_yzmgyc.jpg')
+doudou_lapin.photos.attach(io: file2, filename: 'doudou_lapin2.jpg', content_type: 'image/jpg')
+file3 = URI.open('https://res.cloudinary.com/wagui/image/upload/v1655796598/FabricsApp/Doudou_lapin/doudou_lapin_photo_7_wktjdb.webp')
 doudou_lapin.photos.attach(io: file3, filename: 'doudou_lapin3.webp', content_type: 'image/webp')
-file4 = URI.open('https://res.cloudinary.com/wagui/image/upload/v1655373483/FabricsApp/Doudou_lapin/doudou_lapin_photo_4_lpfbwi.webp')
-doudou_lapin.photos.attach(io: file4, filename: 'doudou_lapin4.webp', content_type: 'image/webp')
-file5 = URI.open('https://res.cloudinary.com/wagui/image/upload/v1655373483/FabricsApp/Doudou_lapin/doudou_lapin_photo_5_ur50mp.jpg')
-doudou_lapin.photos.attach(io: file5, filename: 'doudou_lapin5.webp', content_type: 'image/webp')
+file4 = URI.open('https://res.cloudinary.com/wagui/image/upload/v1655796598/FabricsApp/Doudou_lapin/doudou_lapin_photo_8_o070gr.jpg')
+doudou_lapin.photos.attach(io: file4, filename: 'doudou_lapin4.jpg', content_type: 'image/jpg')
+file5 = URI.open('https://res.cloudinary.com/wagui/image/upload/v1655796598/FabricsApp/Doudou_lapin/doudou_lapin_photo_9_jfkusg.jpg')
+doudou_lapin.photos.attach(io: file5, filename: 'doudou_lapin5.jpg', content_type: 'image/jpg')
 notice1 = URI.open('https://res.cloudinary.com/wagui/image/upload/v1655712493/FabricsApp/Doudou_lapin/doudou_lapin_notice_Page_01_vtgbi3.png')
 doudou_lapin.photos.attach(io: notice1, filename: 'doudou_lapin_notice1.png', content_type: 'image/png')
 notice2 = URI.open('https://res.cloudinary.com/wagui/image/upload/v1655712493/FabricsApp/Doudou_lapin/doudou_lapin_notice_Page_03_qtheej.png')
@@ -233,17 +233,17 @@ sac_a_dos_enfant.photos.attach(io: notice35, filename: 'sac_a_dos_enfant_notice3
 
 puts "#{Creation.count} creations created"
 
-couronne = Creation.create!(name: 'Couronne', longueur: 50, largeur: 40, tissue_type: "", video_link: "test link", patron_link: "pdf/patrons/couronne_vague_sirene_patron.pdf", notice_pdf: "pdf/notices/couronne_vague_sirene_notice.pdf", tagline: "Une vraie sirène a naturellement une couronne dont les pointes sont ornées de jolies perles de mer.", description:"Cousu à partir de tissus non extensibles comme le tissu en coton et renforcé par un insert polaire, vous vous cousez une grande couronne avec ce livre gratuit, qui sera certainement porté avec fierté.", instruction: "Étape par étape, ces instructions conviennent également aux débutants en couture.", time: 2)
-  file1 = URI.open('https://res.cloudinary.com/wagui/image/upload/v1655726983/FabricsApp/Couronne_vague-sir%C3%A8ne/couronne_vague_sirene_o8eyrm.jpg')
+couronne = Creation.create!(name: 'Couronne', longueur: 50, largeur: 40, tissue_type: "", video_link: "test link", patron_link: "pdf/patrons/couronne_vague_sirene_patron.pdf", notice_pdf: "pdf/notices/couronne_vague_sirene_notice.pdf", tagline: "Une vraie princesse a naturellement une couronne unique et personnalisée", description:"Cousu à partir de tissus non extensibles comme le tissu en coton et renforcé par un insert polaire, vous vous cousez une grande couronne avec ce livre gratuit, qui sera certainement porté avec fierté.", instruction: "Étape par étape, ces instructions conviennent également aux débutants en couture.", time: 2)
+  file1 = URI.open('https://res.cloudinary.com/wagui/image/upload/v1655815842/FabricsApp/Couronne_vague-sir%C3%A8ne/couronne_photo_yvwalc.png')
   couronne.photos.attach(io: file1, filename: 'couronne.jpg', content_type: 'image/jpg')
-  file2 = URI.open('https://res.cloudinary.com/wagui/image/upload/v1655726983/FabricsApp/Couronne_vague-sir%C3%A8ne/couronne_vague_sirene2_akz4kt.jpg')
-  couronne.photos.attach(io: file2, filename: 'couronne2.jpg', content_type: 'image/jpg')
-  file3 = URI.open('https://res.cloudinary.com/wagui/image/upload/v1655731019/FabricsApp/Couronne_vague-sir%C3%A8ne/couronne_vague_sirene3_fbqmt9.jpg')
-  couronne.photos.attach(io: file3, filename: 'couronne3.jpg', content_type: 'image/jpg')
-  file4 = URI.open('https://res.cloudinary.com/wagui/image/upload/v1655731019/FabricsApp/Couronne_vague-sir%C3%A8ne/couronne_vague_sirene4_pdjbpp.jpg')
-  couronne.photos.attach(io: file4, filename: 'couronne4.jpg', content_type: 'image/jpg')
-  file5 = URI.open('https://res.cloudinary.com/wagui/image/upload/v1655731018/FabricsApp/Couronne_vague-sir%C3%A8ne/couronne_vague_sirene5_f9mh8f.webp')
-  couronne.photos.attach(io: file5, filename: 'couronne5.jpg', content_type: 'image/jpg')
+  # file2 = URI.open('https://res.cloudinary.com/wagui/image/upload/v1655726983/FabricsApp/Couronne_vague-sir%C3%A8ne/couronne_vague_sirene2_akz4kt.jpg')
+  # couronne.photos.attach(io: file2, filename: 'couronne2.jpg', content_type: 'image/jpg')
+  # file3 = URI.open('https://res.cloudinary.com/wagui/image/upload/v1655731019/FabricsApp/Couronne_vague-sir%C3%A8ne/couronne_vague_sirene3_fbqmt9.jpg')
+  # couronne.photos.attach(io: file3, filename: 'couronne3.jpg', content_type: 'image/jpg')
+  # file4 = URI.open('https://res.cloudinary.com/wagui/image/upload/v1655731019/FabricsApp/Couronne_vague-sir%C3%A8ne/couronne_vague_sirene4_pdjbpp.jpg')
+  # couronne.photos.attach(io: file4, filename: 'couronne4.jpg', content_type: 'image/jpg')
+  # file5 = URI.open('https://res.cloudinary.com/wagui/image/upload/v1655731018/FabricsApp/Couronne_vague-sir%C3%A8ne/couronne_vague_sirene5_f9mh8f.webp')
+  # couronne.photos.attach(io: file5, filename: 'couronne5.jpg', content_type: 'image/jpg')
   notice1 = URI.open('https://res.cloudinary.com/wagui/image/upload/v1655726976/FabricsApp/Couronne_vague-sir%C3%A8ne/couronne_vague_sirene_notice_Page_01_amprqt.png')
   couronne.photos.attach(io: notice1, filename: 'couronne_notice1.png', content_type: 'image/png')
   notice2 = URI.open('https://res.cloudinary.com/wagui/image/upload/v1655726976/FabricsApp/Couronne_vague-sir%C3%A8ne/couronne_vague_sirene_notice_Page_02_fj9oaz.png')
@@ -270,16 +270,16 @@ couronne = Creation.create!(name: 'Couronne', longueur: 50, largeur: 40, tissue_
   puts "#{Creation.count} creations created"
 
   serviette_turban = Creation.create!(name: 'Serviette turban Nala', longueur: 80, largeur: 80, tissue_type: "", video_link: "test link", patron_link: "pdf/patrons/serviette_turban_patron.pdf", notice_pdf: "pdf/notices/serviette_turban_notice.pdf", tagline: "Notre turban serviette pratique NALA repose si merveilleusement sur la tête !", description:"Cousu en tissus éponge pour une absorbtion optimisée, idéal également pour l'application de masques capillaires et soins.", instruction: "Étape par étape, ces instructions conviennent également aux débutants en couture.", time: 2)
-  file1 = URI.open('https://res.cloudinary.com/wagui/image/upload/v1655728826/FabricsApp/Serviette%20turban%20Nala/serviette_turban1_njmine.webp')
-  serviette_turban.photos.attach(io: file1, filename: 'serviette_turban.webp', content_type: 'image/webp')
-  file2 = URI.open('https://res.cloudinary.com/wagui/image/upload/v1655728826/FabricsApp/Serviette%20turban%20Nala/serviette_turban2_rdonva.webp')
-  serviette_turban.photos.attach(io: file2, filename: 'serviette_turban2.webp', content_type: 'image/webp')
-  file3 = URI.open('https://res.cloudinary.com/wagui/image/upload/v1655731237/FabricsApp/Serviette%20turban%20Nala/serviette_turban3_es8rbz.jpg')
-  serviette_turban.photos.attach(io: file3, filename: 'serviette_turban3.jpg', content_type: 'image/jpg')
-  file4 = URI.open('https://res.cloudinary.com/wagui/image/upload/v1655731237/FabricsApp/Serviette%20turban%20Nala/serviette_turban4_x8fu6n.webp')
+  # file1 = URI.open('https://res.cloudinary.com/wagui/image/upload/v1655728826/FabricsApp/Serviette%20turban%20Nala/serviette_turban1_njmine.webp')
+  # serviette_turban.photos.attach(io: file1, filename: 'serviette_turban.webp', content_type: 'image/webp')
+  # file2 = URI.open('https://res.cloudinary.com/wagui/image/upload/v1655728826/FabricsApp/Serviette%20turban%20Nala/serviette_turban2_rdonva.webp')
+  # serviette_turban.photos.attach(io: file2, filename: 'serviette_turban2.webp', content_type: 'image/webp')
+  # file3 = URI.open('https://res.cloudinary.com/wagui/image/upload/v1655731237/FabricsApp/Serviette%20turban%20Nala/serviette_turban3_es8rbz.jpg')
+  # serviette_turban.photos.attach(io: file3, filename: 'serviette_turban3.jpg', content_type: 'image/jpg')
+  file4 = URI.open('https://res.cloudinary.com/wagui/image/upload/v1655817327/FabricsApp/Serviette%20turban%20Nala/serviette_turban4_x8fu6n.webp')
   serviette_turban.photos.attach(io: file4, filename: 'serviette_turban4.webp', content_type: 'image/webp')
-  file5 = URI.open('https://res.cloudinary.com/wagui/image/upload/v1655731237/FabricsApp/Serviette%20turban%20Nala/serviette_turban5_mrwdn1.jpg')
-  serviette_turban.photos.attach(io: file5, filename: 'serviette_turban5.jpg', content_type: 'image/jpg')
+  # file5 = URI.open('https://res.cloudinary.com/wagui/image/upload/v1655731237/FabricsApp/Serviette%20turban%20Nala/serviette_turban5_mrwdn1.jpg')
+  # serviette_turban.photos.attach(io: file5, filename: 'serviette_turban5.jpg', content_type: 'image/jpg')
   notice1 = URI.open('https://res.cloudinary.com/wagui/image/upload/v1655728614/FabricsApp/Serviette%20turban%20Nala/serviette_turban_notice_Page_1_uadmst.png')
   serviette_turban.photos.attach(io: notice1, filename: 'serviette_turban_notice1.png', content_type: 'image/png')
   notice2 = URI.open('https://res.cloudinary.com/wagui/image/upload/v1655728614/FabricsApp/Serviette%20turban%20Nala/serviette_turban_notice_Page_2_odh8yk.png')
@@ -299,7 +299,7 @@ couronne = Creation.create!(name: 'Couronne', longueur: 50, largeur: 40, tissue_
   file1 = URI.open('https://res.cloudinary.com/wagui/image/upload/v1655731932/FabricsApp/Sac%20%C3%A0%20tartes/sac_a_tartes_photo_1_zkrnuo.jpg')
   sac_a_tartes.photos.attach(io: file1, filename: 'sac_a_tartes.jpg', content_type: 'image/jpg')
   file2 = URI.open('https://res.cloudinary.com/wagui/image/upload/v1655731932/FabricsApp/Sac%20%C3%A0%20tartes/sac_a_tartes_photo_2_qk76cl.jpg')
-  sac_a_tartes.photos.attach(io: file2, filename: 'sac_a_tartes2.webp', content_type: 'image/webp')
+  sac_a_tartes.photos.attach(io: file2, filename: 'sac_a_tartes2.jpg', content_type: 'image/jpg')
   file3 = URI.open('https://res.cloudinary.com/wagui/image/upload/v1655731932/FabricsApp/Sac%20%C3%A0%20tartes/sac_a_tartes_photo_3_wvxuan.jpg')
   sac_a_tartes.photos.attach(io: file3, filename: 'sac_a_tartes3.jpg', content_type: 'image/jpg')
   file4 = URI.open('https://res.cloudinary.com/wagui/image/upload/v1655731932/FabricsApp/Sac%20%C3%A0%20tartes/sac_a_tartes_photo_4_gftqnt.jpg')
@@ -322,5 +322,91 @@ couronne = Creation.create!(name: 'Couronne', longueur: 50, largeur: 40, tissue_
   sac_a_tartes.photos.attach(io: notice7, filename: 'sac_a_tartes_notice7.png', content_type: 'image/png')
   notice8 = URI.open('https://res.cloudinary.com/wagui/image/upload/v1655731998/FabricsApp/Sac%20%C3%A0%20tartes/sac_a_tartes_notice_Page_8_rgp7fi.png')
   sac_a_tartes.photos.attach(io: notice8, filename: 'sac_a_tartes_notice8.png', content_type: 'image/png')
+
+  puts "#{Creation.count} creations created"
+
+  fleur_kanzashi = Creation.create!(name: 'Fleur Kanzashi', longueur: 21, largeur: 21, tissue_type: "", video_link: "", patron_link: "", notice_pdf: "", tagline: "Une jolie fleur en tissu facile à réaliser et à accrocher sur une barrette, une broche, un serre tête ou tout autre support de votre choix !
+    ", description:"", instruction: "", time: 1)
+  file1 = URI.open('https://res.cloudinary.com/wagui/image/upload/v1655802873/FabricsApp/Fleur%20kanzashi/fleur_kanzashi_photo_mneaa1.jpg')
+  fleur_kanzashi.photos.attach(io: file1, filename: 'fleur_kanzashi.jpg', content_type: 'image/jpg')
+
+  puts "#{Creation.count} creations created"
+
+  lingettes_lavables = Creation.create!(name: 'Lingettes lavables', longueur: 55, largeur: 25, tissue_type: "", video_link: "", patron_link: "", notice_pdf: "", tagline: "Je vous propose de réaliser facilement un set de 8 lingettes lavables afin de remplacer vos cotons ou essuie-tout jetables.", description:"", instruction: "", time: 1)
+  file1 = URI.open('https://res.cloudinary.com/wagui/image/upload/v1655802936/FabricsApp/Lingettes%20lavables/lingettes_lavables_photos_vevur5.jpg')
+  lingettes_lavables.photos.attach(io: file1, filename: 'lingettes_lavables.jpg', content_type: 'image/jpg')
+
+  puts "#{Creation.count} creations created"
+
+  papillon_origami = Creation.create!(name: 'Papillon Origami', longueur: 19, largeur: 12, tissue_type: "", video_link: "", patron_link: "", notice_pdf: "", tagline: "Avec vos chutes de tissus, réalisez facilement et très rapidement ce petit papillon d’une originalité folle.", description:"", instruction: "", time: 1)
+  file1 = URI.open('https://res.cloudinary.com/wagui/image/upload/v1655803482/FabricsApp/Papillon%20Origami/papillon_origami_photo_g1nsxe.jpg')
+  papillon_origami.photos.attach(io: file1, filename: 'papillon_origami.jpg', content_type: 'image/jpg')
+
+  puts "#{Creation.count} creations created"
+
+  pochon_lapin = Creation.create!(name: 'Le pochon lapin', longueur: 75, largeur: 20, tissue_type: "", video_link: "", patron_link: "", notice_pdf: "", tagline: "Ce petit pochon pourra être décoré selon vos inspirations du moment et décliné en plusieurs tailles en fonction des petits présents que vous allez emballer.", description:"", instruction: "", time: 1)
+  file1 = URI.open('https://res.cloudinary.com/wagui/image/upload/v1655803532/FabricsApp/Pochon%20lapin/pochon_lapin_photo_u0hws5.jpg')
+  pochon_lapin.photos.attach(io: file1, filename: 'pochon_lapin.jpg', content_type: 'image/jpg')
+
+  puts "#{Creation.count} creations created"
+
+  porte_carte = Creation.create!(name: 'Porte cartes de visite', longueur: 19, largeur: 12, tissue_type: "", video_link: "", patron_link: "", notice_pdf: "", tagline: "Une petite pochette facile à réaliser pour ranger vos petites cartes de visite.
+    ", description:"", instruction: "", time: 1)
+  file1 = URI.open('https://res.cloudinary.com/wagui/image/upload/v1655807291/FabricsApp/Porte%20cartes%20de%20visite/porte_carte_de_visite_photo_otm7dm.jpg')
+  porte_carte.photos.attach(io: file1, filename: 'porte_carte.jpg', content_type: 'image/jpg')
+
+  puts "#{Creation.count} creations created"
+
+  protege_carnet = Creation.create!(name: 'Protège carnet de santé', longueur: 110, largeur: 30, tissue_type: "", video_link: "", patron_link: "", notice_pdf: "", tagline: "Personnalisez votre carnet de santé avec un protège cahier facile à coudre !", description:"", instruction: "", time: 1)
+  file1 = URI.open('https://res.cloudinary.com/wagui/image/upload/v1655807347/FabricsApp/Prot%C3%A8ge%20carnet%20de%20sant%C3%A9/protege_carnet_photo_d1wsjt.jpg')
+  protege_carnet.photos.attach(io: file1, filename: 'protege_carnet.jpg', content_type: 'image/jpg')
+
+  puts "#{Creation.count} creations created"
+
+  rangement_tissus = Creation.create!(name: 'Rangement en tissus', longueur: 105, largeur: 20, tissue_type: "", video_link: "", patron_link: "", notice_pdf: "", tagline: "En plus d’améliorer votre organisation, ce panier fera un élément de décoration sympathique et personnalisé.  A décliner en toutes les couleurs et en toutes les tailles !", description:"", instruction: "", time: 2)
+  file1 = URI.open('https://res.cloudinary.com/wagui/image/upload/v1655807579/FabricsApp/Rangement%20en%20tissus/rangement_tissus_photo_ikvb0v.jpg')
+  rangement_tissus.photos.attach(io: file1, filename: 'rangement_tissus.jpg', content_type: 'image/jpg')
+
+  puts "#{Creation.count} creations created"
+
+  trousse = Creation.create!(name: 'Trousse à crayons', longueur: 30, largeur: 25, tissue_type: "", video_link: "", patron_link: "", notice_pdf: "", tagline: "Réalisez facilement une trousse à crayons pour la rentrée.", description:"", instruction: "", time: 2)
+  file1 = URI.open('https://res.cloudinary.com/wagui/image/upload/v1655807718/FabricsApp/Trousse/trousse_photo_t9sbqd.jpg')
+  trousse.photos.attach(io: file1, filename: 'trousse.jpg', content_type: 'image/jpg')
+
+  puts "#{Creation.count} creations created"
+
+  housse_de_coussin = Creation.create!(name: 'Coussins maison', longueur: 80, largeur: 50, tissue_type: "", video_link: "", patron_link: "", notice_pdf: "", tagline: "Je vous propose de réaliser vos propres housses de coussins afin de pouvoir changer votre décoration intérieure aussi souvent que vous le souhaitez !", description:"", instruction: "", time: 1)
+  file1 = URI.open('https://res.cloudinary.com/wagui/image/upload/v1655813628/FabricsApp/Housse%20de%20coussin/housse_de_coussin_photo_ot9sgv.jpg')
+  housse_de_coussin.photos.attach(io: file1, filename: 'housse_de_coussin.jpg', content_type: 'image/jpg')
+
+  puts "#{Creation.count} creations created"
+
+  trousse_berlingot = Creation.create!(name: 'Trousse berlingot', longueur: 40, largeur: 25, tissue_type: "", video_link: "", patron_link: "", notice_pdf: "", tagline: "Une petite trousse facile à réaliser et à décliner en toutes les couleurs et en toutes les tailles.", description:"", instruction: "", time: 1)
+  file1 = URI.open('https://res.cloudinary.com/wagui/image/upload/v1655813877/FabricsApp/Trousse%20berlingot/trousse_berlingot_photo_yldi0a.jpg')
+  trousse_berlingot.photos.attach(io: file1, filename: 'trousse_berlingot.jpg', content_type: 'image/jpg')
+
+  puts "#{Creation.count} creations created"
+
+  le_sac_cabat = Creation.create!(name: 'Le sac cabat', longueur: 80, largeur: 50, tissue_type: "", video_link: "", patron_link: "", notice_pdf: "", tagline: "Ce petit sac cabas est également l’ami des couturières expérimentées qui veulent faire un cadeau rapide et joli. A customiser à l’infini !", description:"", instruction: "", time: 1)
+  file1 = URI.open('https://res.cloudinary.com/wagui/image/upload/v1655814247/FabricsApp/Sac%20cabat/sac_cabat_photo_gwjb59.jpg')
+  le_sac_cabat.photos.attach(io: file1, filename: 'le_sac_cabat.jpg', content_type: 'image/jpg')
+
+  puts "#{Creation.count} creations created"
+
+  pochette_girly = Creation.create!(name: 'La pochette Girly', longueur: 140, largeur: 40, tissue_type: "", video_link: "", patron_link: "", notice_pdf: "", tagline: "Ce petit étui vous permettra de ranger absolument tout ce que vous désirez !", description:"", instruction: "", time: 1)
+  file1 = URI.open('https://res.cloudinary.com/wagui/image/upload/v1655814458/FabricsApp/Pochette%20girly/pochette_girly_photo_ned60b.jpg')
+  pochette_girly.photos.attach(io: file1, filename: 'pochette_girly.jpg', content_type: 'image/jpg')
+
+  puts "#{Creation.count} creations created"
+
+  trousse_maquillage = Creation.create!(name: 'Trousse à maquillage', longueur: 40, largeur: 26, tissue_type: "", video_link: "", patron_link: "", notice_pdf: "", tagline: "Un projet parfait pour celles qui débutent en couture et qui veulent apprendre à poser une fermeture éclair facilement.", description:"", instruction: "", time: 1)
+  file1 = URI.open('https://res.cloudinary.com/wagui/image/upload/v1655814615/FabricsApp/Trousse%20maquillage/trousse_maquillage_photo_wiycoj.jpg')
+  trousse_maquillage.photos.attach(io: file1, filename: 'trousse_maquillage.jpg', content_type: 'image/jpg')
+
+  puts "#{Creation.count} creations created"
+
+  sac_tricot = Creation.create!(name: 'Le sac à tricot', longueur: 140, largeur: 100, tissue_type: "", video_link: "", patron_link: "", notice_pdf: "", tagline: "Envie d’un joli sac de sport pour aller à la gym ou à la danse ?", description:"", instruction: "", time: 3)
+  file1 = URI.open('https://res.cloudinary.com/wagui/image/upload/v1655815086/FabricsApp/Sac%20%C3%A0%20tricot/sac_tricot_photo_nvvhiy.jpg')
+  sac_tricot.photos.attach(io: file1, filename: 'sac_tricot.jpg', content_type: 'image/jpg')
 
   puts "#{Creation.count} creations created"

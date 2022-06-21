@@ -1,9 +1,5 @@
-
-
-<h1>creations index</h1>
 <div class="main-container">
   <div class="banner-index">
-
   </div>
 
 <div class="index-container">
@@ -19,43 +15,42 @@
         <%= form_tag creations_path, method: :get do %>
           <%= text_field_tag :query_long,
                           params[:query_long],
-                          class: "form-control",
+                          class: "form-control mb-4",
+                          id: "long",
                           placeholder: "longueur" %>
-          <br>
           <%= text_field_tag :query_larg,
                           params[:query_larg],
-                          class: "form-control",
+                          class: "form-control mb-4",
+                          id: "larg",
                           placeholder: "largeur" %>
-          <br>
-          <br>
-          <%= submit_tag "Rechercher", class: "btn-recherche" %>
+          <%= submit_tag "Rechercher", class: "btn-recherche mt-4" %>
         <% end %>
       </div>
     </div>
     <div class="visual">
-      <h2 id="longueur">longueur</h2>
-      <br>
-      <br>
-      <br>
-      <h2 id="largeur">l</h2>
-      <h2 id="largeur">a</h2>
-      <h2 id="largeur">r</h2>
-      <h2 id="largeur">g</h2>
-      <h2 id="largeur">e</h2>
-      <h2 id="largeur">u</h2>
-      <h2 id="largeur">r</h2>
+      <div class="longueur">
+        <h2>longueur</h2>
+      </div>
+      <div class="largeur">
+        <h2>l</h2>
+        <h2>a</h2>
+        <h2>r</h2>
+        <h2>g</h2>
+        <h2>e</h2>
+        <h2>u</h2>
+        <h2>r</h2>
+      </div>
       <div class="rectangle">
         <% if params[:query_long] && params[:query_larg] && params[:query_long] != "" && params[:query_larg] != "" %>
-          <h2 id="longueur"><%= params[:query_long] %> cm</h2>
-          <br>
-          <% (0...(3 - params[:query_larg].length)).each do |i| %>
-            <br>
-          <% end %>
-          <% (0...params[:query_larg].length).each do |i| %>
-            <h2 id="largeur"><%= params[:query_larg][i].to_i %></h2>
-          <% end %>
-          <h2 id="largeur">c</h2>
-          <h2 id="largeur">m</h2>
+          <div id="longueur">
+            <h3><%= params[:query_long] %></h3>
+          </div>
+          <%# (0...(3 - params[:query_larg].length)).each do |i| %>
+            <%# <br> %>
+          <%# end %>
+          <div id="largeur">
+            <h3><%= params[:query_larg] %></h3>
+          </div>
         <% end %>
       </div>
     </div>
