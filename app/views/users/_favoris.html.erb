@@ -1,8 +1,13 @@
 <div class="user-page-modal favoris d-none">
-  <div class="mygrid">
-    <% @userfav.each do |item| %>
-    <%= render 'shared/card', creation: item %>
+  <div class="card-container">
+    <% if @userfav == [] %>
+      <h1>No favoris yet</h1>
+    <% else %>
+      <% @userfav.each do |favori| %>
+        <%= link_to creation_path(favori) do %>
+          <%= render 'shared/card', creation: favori %>
+        <% end %>
+      <% end %>
     <% end %>
   </div>
 </div>
-
