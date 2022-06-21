@@ -22,12 +22,7 @@ class CreationsController < ApplicationController
       end
     end
 
-    @fav = Favori.where(creation_id: params[:id], user_id: current_user)
-    if !@fav.nil?
-      @fav.each do |item|
-        item.creation_id == @creation.id  if  @fav_exist = true
-      end
-    end
+
 
   end
 end

@@ -27,17 +27,8 @@
   </div>
 
     <div style="margin-left: 90%">
-      <% if !@fav_exist %>
-        <%= link_to "FAV",
-              creation_favoris_path(@creation.id),
-              method: :post,
-              class: "fas fa-heart"%>
-        <% else %>
-        <%= link_to "NoFAV",
-              favori_path(@fav[0]),
-              method: :delete,
-              class: "fas fa-heart"%>
-              <% end %>
+
+
     </div>
   </div>
 

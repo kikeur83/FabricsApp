@@ -2,7 +2,7 @@ class Creation < ApplicationRecord
   has_many_attached :photos
   has_many :favoris, dependent: :destroy
   has_many :creation_materiels, dependent: :destroy
-  acts_as_favoritable
+
 
   validates :name, presence: true
   validates :longueur, presence: true, numericality: true
