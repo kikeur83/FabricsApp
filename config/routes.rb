@@ -6,7 +6,11 @@ Rails.application.routes.draw do
 
   get "users", to: "users#show"
 
-  resources :creations, only: [:show, :index]
+  resources :creations, only: [:show, :index] do
+    member do
+      post 'toggle_favorite', to: "creations#toggle_favorite"
+    end
+  end
 
   resources :user_materiels, only: [:new, :create, :destroy]
 

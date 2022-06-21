@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  acts_as_favoritor
   has_many :favoris, dependent: :destroy
   has_many :user_materiels, dependent: :destroy
   # Include default devise modules. Others available are:

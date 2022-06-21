@@ -1,0 +1,6 @@
+var creationId = '<%= @creation.id%>'
+function toggleLikeButton(creationId, innerHTML) {
+  let likeButton = document.querySelector(`.like-icon[data-id='${creationId}']`)
+  likeButton.classList.toggle('red');
+}
+toggleLikeButton(creationId);
