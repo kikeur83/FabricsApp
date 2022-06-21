@@ -6,9 +6,8 @@ Rails.application.routes.draw do
 
   get "users", to: "users#show"
 
-  resources :creations, only: [:show, :index] do
-    resources :favoris, only: [:new, :create]
-  end
+  resources :creations, only: [:show, :index]
+
   resources :user_materiels, only: [:new, :create, :destroy]
-  resources :favoris, only: [:destroy]
+
 end
