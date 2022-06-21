@@ -3,8 +3,8 @@
   </div>
 
   <div class="title">
-  <h1><%= @creation.name %></h1>
-  <p>Temps de réalisation: <%= @creation.time %>Heure(s)</p>
+    <h1><%= @creation.name %></h1>
+    <p>Temps de réalisation: <%= @creation.time %>Heure(s)</p>
   </div>
 
   <div class="patron">
@@ -26,6 +26,7 @@
     <% end %>
   </div>
 
+
     <div style="margin-left: 90%">
 
 
@@ -39,13 +40,13 @@
     </div>
   </div>
 
-  <div>
+  <div class="card-container">
     <% @creations.each do |creation| %>
       <% if creation.id != @creation.id %>
         <%= render 'shared/card', creation: creation %>
-        <br>
       <% end %>
     <% end %>
   </div>
+
   <%= link_to "Back to Index", creations_path(:query_long => params[:query_long], :query_larg => params[:query_larg]) %>
 </div>
