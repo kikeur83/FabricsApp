@@ -1,6 +1,13 @@
 <div class="user-page-modal favoris d-none">
   <div class="mygrid">
-
+  <% if @current_user_favorites_id.present? %>
+   <%  @current_user_favorites_id.each do |id|%>
+    <% creation = Creation.find(id) %>
+  <%= render 'shared/card', creation: creation %>
+   <% end %>
+  <%  else %>
+  <h2> You don`t have any favorites </h2>
+  <% end %>
   </div>
 </div>
 
