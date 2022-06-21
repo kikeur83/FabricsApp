@@ -33,29 +33,63 @@
 
 .visual {
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 20px;
   margin: 20px;
   height: 500px;
   width: 500px;
   background-color: gray;
-  #largeur {
-    text-align: start;
-  }
+  // #largeur {
+  //   text-align: start;
+  // }
   h2 {
-    text-align: center;
+    // text-align: center;
     padding: 0;
     margin: 0;
   }
 }
 
-.rectangle {
+.longueur {
   position: absolute;
+  top: 3%;
+  left: 50%;
+  transform: translate(-49px, 0);
+}
+
+.largeur {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  transform: translate(0, -135px);
+}
+
+.rectangle {
+  position: relative;
   padding: 10px;
-  height: 65%;
-  width: 65%;
-  left: 20%;
-  top: 20%;
+  height: 75%;
+  width: 75%;
   background-color: red;
+  h3 {
+    // text-align: center;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+#longueur {
+  position: absolute;
+  top: 3%;
+  left: 50%;
+  transform: translate(-23px, 0);
+}
+
+#largeur {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  transform: translate(0, -17px);
 }
 
 .card-container {

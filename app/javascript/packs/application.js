@@ -8,6 +8,7 @@ import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 import {profile} from "components/profile"
+import {rectangle} from "components/creation_index"
 
 Rails.start()
 Turbolinks.start()
@@ -18,4 +19,5 @@ import "bootstrap"
 
 document.addEventListener('turbolinks:load', () => {
     profile()
+    rectangle()
 })
