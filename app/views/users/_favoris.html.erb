@@ -1,13 +1,28 @@
 <div class="user-page-modal favoris d-none">
-  <div class="mygrid">
-  <% if @current_user_favorites_id.present? %>
-   <%  @current_user_favorites_id.each do |id|%>
-    <% creation = Creation.find(id) %>
-  <%= render 'shared/card', creation: creation %>
-   <% end %>
-  <%  else %>
-  <h2> You don`t have any favorites </h2>
-  <% end %>
+  <div class="card-container">
+    <% if @current_user_favorites_id.present? %>
+      <% len = @current_user_favorites_id.length %>
+      <% (0...len).each do |i| %>
+        <% if i % 3 == 0 %>
+          <div class="nogrid">
+        <% end %>
+        <% favori = @current_user_favorites_id[i] %>
+        <% creation = Creation.find(favori) %>
+        <%= link_to creation_path(creation) do %>
+          <%= render 'shared/card', creation: creation %>
+        <% end %>
+        <% if i == len - 1 %>
+          <% loop do %>
+            <% break if i % 3 == 2 %>
+            <div class="a-fill"></div>
+            <div class="fill"></div>
+            <% i = i + 1 %>
+          <% end %>
+        <% end %>
+        <% if i % 3 == 2 %>
+          </div>
+        <% end %>
+      <% end %>
+    <% end %>
   </div>
 </div>
-
