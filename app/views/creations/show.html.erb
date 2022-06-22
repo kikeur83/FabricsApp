@@ -40,42 +40,36 @@
       <%= link_to "Télecharger notice", asset_path(@creation.notice_pdf), target: :_blank %>
     </div>
   </div>
+
   <br>
   <br>
-  <div>
-    <h2>Voici quelques autres créations possibles avec vos dimensions de tissus :</h2>
+  <br>
+
+  <div class="mon-bouton-recherche">
+    <%= link_to "Retour recherches", creations_path(:query_long => params[:query_long], :query_larg => params[:query_larg]), class: "bk-index" %>
   </div>
 
-
-  <div class="card-container">
+  <div class="autres-crea">
     <% creations = [] %>
     <% @creations.each do |creation| %>
       <% if creation.id != @creation.id %>
         <% creations << creation %>
       <% end %>
     <% end %>
-    <% len = creations.length %>
-        <% (0...len).each do |i| %>
-          <% if i % 3 == 0 %>
-            <div class="nogrid">
-          <% end %>
-          <% creation = creations[i] %>
-          <%= link_to creation_path(creation) do %>
-            <%= render 'shared/card', creation: creation %>
-          <% end %>
-          <% if i == len - 1 %>
-            <% loop do %>
-              <% break if i % 3 == 2 %>
-              <div class="a-fill"></div>
-              <div class="fill"></div>
-              <% i = i + 1 %>
+    <% if creations.present? %>
+      <h2>Autres créations possibles avec les mesures saisies</h2>
+      <div class="card-container">
+        <% i = 0 %>
+        <% @creations.each do |creation| %>
+          <div>
+            <%= link_to creation_path(creation) do %>
+              <%= render 'shared/card', creation: creation %>
             <% end %>
-          <% end %>
-          <% if i % 3 == 2 %>
-            </div>
-          <% end %>
+          </div>
+          <% i = i + 1 %>
+          <% break if i == 3 %>
         <% end %>
+      </div>
+    <% end %>
   </div>
-
-  <%= link_to "Back to Index", creations_path(:query_long => params[:query_long], :query_larg => params[:query_larg]) %>
 </div>
