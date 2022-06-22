@@ -1,32 +1,33 @@
 <div class="main-container">
   <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="https://res.cloudinary.com/drizziyom/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1655721002/seed/cerisier_cnpfml.jpg" class="d-block w-100" >
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://res.cloudinary.com/drizziyom/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1655721002/seed/cerisier_cnpfml.jpg" class="d-block w-100" >
+      </div>
+      <div class="carousel-item">
+        <img src="https://res.cloudinary.com/drizziyom/image/upload/c_scale,h_1327,q_80,r_0,w_1642/v1655721000/seed/cerise_r570k6.jpg" class="d-block w-100" >
+      </div>
+      <div class="carousel-item">
+        <img src="https://res.cloudinary.com/drizziyom/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1655720993/seed/abricotier_yscd7s.jpg" class="d-block w-100" >
+      </div>
     </div>
-    <div class="carousel-item">
-      <img src="https://res.cloudinary.com/drizziyom/image/upload/c_scale,h_1327,q_80,r_0,w_1642/v1655721000/seed/cerise_r570k6.jpg" class="d-block w-100" >
-    </div>
-    <div class="carousel-item">
-      <img src="https://res.cloudinary.com/drizziyom/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1655720993/seed/abricotier_yscd7s.jpg" class="d-block w-100" >
-    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
   </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
+  <button class="to-top">Top</button>
 
   <div class="title">
     <h1><%= @creation.name %></h1>
     <p>Temps de réalisation : <%= @creation.time %> Heure(s)</p>
   </div>
 
-   <div style="margin-left: 90%">
+  <div class="favori">
     <%= render 'shared/like_button', creation: @creation %>
   </div>
 
@@ -50,11 +51,13 @@
     <% end %>
   </div>
 
-
-
-
-
+  <div class="bouton-top"></div>
   <div class="notice">
+    <div class="lespdf">
+      <% @creation.photos.drop(5).each do |photo| %>
+        <%= cl_image_tag photo.key, height: 1052, width: 744 %>
+      <% end %>
+    </div>
     <div class="mon-bouton-recherche">
       <%= link_to "Télecharger notice", asset_path(@creation.notice_pdf), target: :_blank %>
     </div>
