@@ -2,6 +2,8 @@
   background-color:#F5D8D8;
   height: 544px;
   width: 377px;
+  border-radius: 6px;
+  box-shadow: 2px 2px 4px 1px rgba(164, 12, 47, 0.471);
 }
 
 
@@ -40,17 +42,18 @@ p {
 }
 .icon-visite {
   margin-right: 16px;
-lor: red;}
+  color: red;}
 
 .red{
   .fa-heart{
-    color: red!important;
+    color: #E13434!important;
   }
 }
 
 .fa-heart {
-  color: black;
+  color: #e1343476!important;
 }
+
 
 // .fa-history:before {
 // font-size: 24px;
