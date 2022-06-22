@@ -8,13 +8,19 @@ background-size: cover;
 
 }
 .user-choice {
-
+  box-shadow: 0 0 4px #f24537;
+  border-radius: 4px;
 }
 
 .btn-user {
   width: 100%;
   height: 72px;
-  border: 1px solid #FFDAFC;
+  border: 1px solid white;
   border-radius: 4px;
   background-color: #FFDAFC;
+}
+
+.btn-user:focus {
+  box-shadow: 0 0 6px #f24537;
+  background-color: white;
 }
