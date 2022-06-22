@@ -12,12 +12,20 @@
   }
 }
 
+.copyright {
+  display: flex;
+  align-items: center;
+  p {
+    margin-left: 4px;
+  }
+}
+
 .footer-font {
-  font-size: 48px;
+  font-size: 40px;
   color: white;
 }
 
-.footer-font:hover {
+.footer-font i:hover {
 
   color: #f24537;
 }
