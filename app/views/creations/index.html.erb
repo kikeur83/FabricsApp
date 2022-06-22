@@ -65,11 +65,27 @@
         <% end %>
       <% end %>
       <% if @creations == [] %>
-        <h1>No match found</h1>
+        <%# <h1>Aucun resultat</h1> %>
       <% else %>
-        <% @creations.each do |creation| %>
+        <% len = @creations.length %>
+        <% (0...len).each do |i| %>
+          <% if i % 3 == 0 %>
+            <div class="nogrid">
+          <% end %>
+          <% creation = @creations[i] %>
           <%= link_to creation_path(creation, :creations_ids => creations_ids, :query_long => params[:query_long], :query_larg => params[:query_larg]) do %>
             <%= render 'shared/card', creation: creation %>
+          <% end %>
+          <% if i == len - 1 %>
+            <% loop do %>
+              <% break if i % 3 == 2 %>
+              <div class="a-fill"></div>
+              <div class="fill"></div>
+              <% i = i + 1 %>
+            <% end %>
+          <% end %>
+          <% if i % 3 == 2 %>
+            </div>
           <% end %>
         <% end %>
       <% end %>

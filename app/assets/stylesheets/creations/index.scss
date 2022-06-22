@@ -96,10 +96,22 @@
 }
 
 .card-container {
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+.nogrid {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  gap: 30px 30px;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.a-fill {
+  width: 0;
+}
+
+.fill {
+  width: 377px;
 }
