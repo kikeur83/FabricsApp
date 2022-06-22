@@ -1,7 +1,7 @@
 
 <div class="visite-index">
   <div class="img-visite">
-    <%= image_tag creation.photos[0], class: "img-card", size: "377x280"%>
+    <%= cl_image_tag creation.photos.first.key, class: "img-card", size: "377x280"%>
   </div>
   <div class="description-index">
     <h2 style="text-decoration:none;"><%= creation.name %></h2><br>
