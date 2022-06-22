@@ -57,11 +57,12 @@
   padding: 16px 16px;
 
 }
-// .mygrid-3 {
-//     display: grid;
-//     grid-template-columns: 1fr 1fr 1fr;
-//     grid-gap: 15px;
-// }
+.mygrid-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 15px;
+  padding-left: 10px;
+}
 
 
 .display-img-show {
@@ -99,11 +100,12 @@
 
 
 
-// .mygrid {
-  //     display: grid;
-  //     grid-template-columns: 1fr 1fr;
-//     grid-gap: 15px;
-// }
+.mygrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 15px;
+}
+
   // .contain-show {
   //   display: flex;
   //   justify-content: space-around;
