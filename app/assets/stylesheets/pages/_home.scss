@@ -50,7 +50,9 @@ margin-top: 100px;
   color: white;
 }
 
-
+.img-mesure {
+  border-radius: 4px;
+}
 
 .present {
   display: flex;
@@ -58,6 +60,7 @@ margin-top: 100px;
   margin-top: 32px;
   margin-bottom: 32px;
   align-items: center;
+  height: 250px;
 
 }
 
@@ -67,6 +70,7 @@ margin-top: 100px;
   margin-top: 32px;
   margin-bottom: 32px;
   align-items: center;
+  height: 300px;
 }
 
 .present3 {
