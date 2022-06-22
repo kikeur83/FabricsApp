@@ -41,13 +41,35 @@
     </div>
   </div>
 
-  <div class="card-container">
-    <% @creations.each do |creation| %>
-      <% if creation.id != @creation.id %>
-        <%= render 'shared/card', creation: creation %>
-      <% end %>
-    <% end %>
+  <br>
+  <br>
+  <br>
+
+  <div class="mon-bouton-recherche">
+    <%= link_to "Retour recherches", creations_path(:query_long => params[:query_long], :query_larg => params[:query_larg]), class: "bk-index" %>
   </div>
 
-  <%= link_to "Back to Index", creations_path(:query_long => params[:query_long], :query_larg => params[:query_larg]) %>
+  <div class="autres-crea">
+    <% creations = [] %>
+    <% @creations.each do |creation| %>
+      <% if creation.id != @creation.id %>
+        <% creations << creation %>
+      <% end %>
+    <% end %>
+    <% if creations.present? %>
+      <h2>Autres créations possibles avec les mesures saisies</h2>
+      <div class="card-container">
+        <% i = 0 %>
+        <% @creations.each do |creation| %>
+          <div>
+            <%= link_to creation_path(creation) do %>
+              <%= render 'shared/card', creation: creation %>
+            <% end %>
+          </div>
+          <% i = i + 1 %>
+          <% break if i == 3 %>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
 </div>

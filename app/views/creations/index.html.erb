@@ -57,22 +57,22 @@
   </div>
 
   <div class="card-container">
-    <%# <div class="mygrid-3"> %>
-      <% creations_ids = [] %>
-      <% if params[:query_long] && params[:query_larg] && params[:query_long] != "" && params[:query_larg] != "" %>
-        <% @creations.each do |creation| %>
-          <% creations_ids << creation.id %>
-        <% end %>
+    <% creations_ids = [] %>
+    <% if params[:query_long] && params[:query_larg] && params[:query_long] != "" && params[:query_larg] != "" %>
+      <% @creations.each do |creation| %>
+        <% creations_ids << creation.id %>
       <% end %>
-      <% if @creations == [] %>
-        <h1>No match found</h1>
-      <% else %>
-        <% @creations.each do |creation| %>
+    <% end %>
+    <% if @creations == [] %>
+      <h1>Aucun resultat</h1>
+    <% else %>
+      <% @creations.each do |creation| %>
+        <div>
           <%= link_to creation_path(creation, :creations_ids => creations_ids, :query_long => params[:query_long], :query_larg => params[:query_larg]) do %>
             <%= render 'shared/card', creation: creation %>
           <% end %>
-        <% end %>
+        </div>
       <% end %>
-    <%# </div> %>
+    <% end %>
   </div>
 </div>
