@@ -1,15 +1,19 @@
-<div class="main-container">
-  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="https://res.cloudinary.com/drizziyom/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1655721002/seed/cerisier_cnpfml.jpg" class="d-block w-100" >
+      <%= cl_image_tag @creation.photos[0].key, class: "d-block w-100" %>
     </div>
     <div class="carousel-item">
-      <img src="https://res.cloudinary.com/drizziyom/image/upload/c_scale,h_1327,q_80,r_0,w_1642/v1655721000/seed/cerise_r570k6.jpg" class="d-block w-100" >
+      <%= cl_image_tag @creation.photos[1].key, class: "d-block w-100 " %>
     </div>
-    <div class="carousel-item">
-      <img src="https://res.cloudinary.com/drizziyom/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1655720993/seed/abricotier_yscd7s.jpg" class="d-block w-100" >
-    </div>
+  <div class="carousel-item">
+    <%= cl_image_tag @creation.photos[2].key, class: "d-block w-100" %>
+  </div>
+  <div class="carousel-item">
+      <%= cl_image_tag @creation.photos[3].key, class: "d-block w-100" %>
+  </div>
+  <div class="carousel-item">
+      <%= cl_image_tag @creation.photos[4].key, class: "d-block w-100" %>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -20,6 +24,9 @@
     <span class="visually-hidden">Next</span>
   </button>
 </div>
+
+<div class="main-container">
+
 
   <div class="title">
     <h1><%= @creation.name %></h1>
@@ -45,7 +52,7 @@
   </div>
 
   <div class="display-img-show">
-    <% @creation.photos.first(4).each do |photo| %>
+    <% @creation.photos.first(3).each do |photo| %>
       <%= cl_image_tag photo.key, height: 450, width: 450, crop: :fill, class: "item"  %>
     <% end %>
   </div>
