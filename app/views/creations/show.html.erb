@@ -45,10 +45,8 @@
     </div>
   </div>
 
-  <div class="display-img-show">
-    <% @creation.photos.first(3).each do |photo| %>
-      <%= cl_image_tag photo.key, height: 450, width: 450, crop: :fill, class: "item"  %>
-    <% end %>
+  <div class="mon-bouton-recherche" style="margin-top: 45px">
+    <%= link_to "Retour recherches", creations_path(:query_long => params[:query_long], :query_larg => params[:query_larg]), class: "bk-index" %>
   </div>
 
   <div class="bouton-top"></div>
@@ -66,10 +64,6 @@
   <br>
   <br>
   <br>
-
-  <div class="mon-bouton-recherche">
-    <%= link_to "Retour recherches", creations_path(:query_long => params[:query_long], :query_larg => params[:query_larg]), class: "bk-index" %>
-  </div>
 
   <div class="autres-crea">
     <% creations = [] %>
