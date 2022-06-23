@@ -1,5 +1,4 @@
 meta_product_name: "FabricsApp"
-meta_title: "FabricsApp" - Couture sur mesure"
+meta_title: "FabricsApp - Couture sur mesure"
 meta_description: "Débordez d'idées couture grâce à notre module de recherche de création, visualisez les pas à pas et imprimez les patrons, FabricsApp vous propose une expérience écologique et innovante en recyclant vos chutes de tissus."
 meta_image: "fabricsapp.png" # should exist in `app/assets/images/`
-# twitter_account: "@product_twitter_account"   # required for Twitter Cards
