@@ -1,21 +1,22 @@
-
-<div class="visite-index">
-  <div class="img-visite">
-    <%= cl_image_tag creation.photos.first.key, class: "img-card", size: "377x280"%>
-  </div>
-  <div class="description-index">
-    <h2 style="text-decoration:none;"><%= creation.name %></h2><br>
-    <p style="text-decoration:none;"><%= creation.tagline %></p>
-  </div>
-
-  <div class="footer-visite">
-    <div class="timer-visite">
-      <i class="fas fa-history">&nbsp</i>
-      <h2 class="footer-time" style="text-decoration:none;"><%= creation.time %>&nbspHeure(s)</h2>
+<div class = "favorite", data-id="<%= creation.id %>" >
+  <div class="visite-index creation">
+    <div class="img-visite">
+      <%= cl_image_tag creation.photos.first.key, class: "img-card", size: "377x280"%>
     </div>
-    <div class="icon-visite">
-      <%= render 'shared/like_button', creation: creation %>
+    <div class="description-index">
+      <h2 style="text-decoration:none;"><%= creation.name %></h2><br>
+      <p style="text-decoration:none;"><%= creation.tagline %></p>
+    </div>
 
+    <div class="footer-visite">
+      <div class="timer-visite">
+        <i class="fas fa-history">&nbsp</i>
+        <h2 class="footer-time" style="text-decoration:none;"><%= creation.time %>&nbspHeure(s)</h2>
+      </div>
+      <div class="icon-visite">
+        <%= render 'shared/like_button', creation: creation %>
+
+      </div>
     </div>
   </div>
 </div>

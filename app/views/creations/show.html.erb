@@ -1,7 +1,7 @@
 <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <%= cl_image_tag @creation.photos[0].key, class: "d-block w-100" %>
+      <%= cl_image_tag @creation.photos[0].key, class: "d-block w-80" %>
     </div>
     <div class="carousel-item">
       <%= cl_image_tag @creation.photos[1].key, class: "d-block w-100 " %>
@@ -15,6 +15,7 @@
     <div class="carousel-item">
         <%= cl_image_tag @creation.photos[4].key, class: "d-block w-100" %>
     </div>
+  </div>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
