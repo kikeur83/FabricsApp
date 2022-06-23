@@ -47,11 +47,12 @@
     </div>
   </div>
 
+  <div class="bouton-top"></div>
+
   <div class="mon-bouton-recherche" style="margin-top: 45px">
     <%= link_to "Retour recherches", creations_path(:query_long => params[:query_long], :query_larg => params[:query_larg]), class: "bk-index" %>
   </div>
 
-  <div class="bouton-top"></div>
   <div class="notice">
     <div class="lespdf">
       <% @creation.photos.drop(5).each do |photo| %>
