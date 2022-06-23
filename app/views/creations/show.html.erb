@@ -1,13 +1,15 @@
 <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
     <% (0...5).each do |i| %>
-      <% if i == 0 %>
-        <div class="carousel-item active">
-      <% else %>
-        <div class="carousel-item">
+      <% if @creation.photos[i].present? %>
+        <% if i == 0 %>
+          <div class="carousel-item active">
+        <% else %>
+          <div class="carousel-item">
+        <% end %>
+          <%= cl_image_tag @creation.photos[i].key, height: 450, width: 550, crop: :fill, class: "d-block w-100" %>
+        </div>
       <% end %>
-        <%= cl_image_tag @creation.photos[i].key, height: 450, width: 550, crop: :fill, class: "d-block w-100" %>
-      </div>
     <% end %>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">

@@ -2,7 +2,6 @@
   justify-content: left;
 }
 
-
 .user-choice {
   border: 1px solid white;
   margin-left: 16px;
@@ -27,4 +26,8 @@
 .btn-user:focus {
   box-shadow: 0 0 6px #f24537;
   background-color: white;
+}
+
+#user_banner {
+  width: 100%;
 }
