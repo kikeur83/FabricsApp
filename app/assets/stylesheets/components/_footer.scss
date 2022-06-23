@@ -6,11 +6,21 @@
   justify-content: space-between;
   padding-left: 10px;
   padding-right: 10px;
+  position: relative;
 
   p {
     margin: 0px;
   }
+
+  .btn-footer {
+    position: absolute;
+    width: 286px;
+    min-height: auto;
+    left: 288px;
+    top: 19%;
+  }
 }
+
 
 .copyright {
   display: flex;
