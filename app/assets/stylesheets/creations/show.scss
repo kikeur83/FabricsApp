@@ -14,14 +14,21 @@
   align-items: center;
   background-color: #f5d8d8;
   margin-top: 1px;
+  height: 450px;
 }
 
 .carousel-inner {
-  width: 450px;
+  width: 550px;
+  height: 450px;
 }
 
-.carousel-item{
-  height: 300px;
+.carousel-item {
+  height: 450px;
+  background: #FFDAFC;
+}
+
+.carousel-item.active {
+  height: 450px;
   background: #FFDAFC;
 }
 
