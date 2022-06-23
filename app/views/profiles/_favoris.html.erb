@@ -1,13 +1,11 @@
 <div class="user-page-modal favoris d-none">
   <div>
     <div class="card-container">
-      <% if @current_user_favorites_id.present? %>
-        <% creations = [] %>
+      <% unless @current_user_favorites_id.nil? %>
         <% @current_user_favorites_id.each do |favori| %>
-          <% creations << Creation.find(favori) %>
-        <% end %>
-        <% creations.each do |creation| %>
+
           <div>
+          <% creation = Creation.find(favori)%>
             <%= link_to creation_path(creation) do %>
               <%= render 'shared/card', creation: creation %>
             <% end %>
@@ -16,6 +14,7 @@
       <%  else %>
         <h2> Vous n'avez actuellement pas de favori </h2>
       <% end %>
+
     </div>
   </div>
 </div>

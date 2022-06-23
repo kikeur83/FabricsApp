@@ -1,6 +1,12 @@
 var creationId = '<%= @creation.id%>'
-function toggleLikeButton(creationId, innerHTML) {
+function toggleLikeButton(creationId, favoritedCreation) {
+  console.log("hello here iam")
   let likeButton = document.querySelector(`.like-icon[data-id='${creationId}']`)
   likeButton.classList.toggle('red');
+  <%# unless (likeButton.classList.contains('red')) {
+    document.querySelector(`.favorite[data-id='${creationId}']`).remove()
+  };
+ <%# '<%= j render "shared/card", creation: creation %>
 }
+
 toggleLikeButton(creationId);

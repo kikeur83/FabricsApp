@@ -1,16 +1,22 @@
+
+<div class="main-container">
 <div class="banner-user">
   <%= image_tag "banner-user.png", id:"user_banner"%>
+  <div class="mon-bouton-recherche" style="margin-bottom:120px">
+  <a href="/creations">Recherche</a>
 </div>
-<div class="main-container">
-
+</div>
 
     <div class="d-flex justify-content-between">
       <div class="d-flex flex-column" style="width: 15%">
         <div class="user-choice">
           <%= link_to "Profile" , "#", class: "btn btn-gradient btnlinks btn-user" %>
           <%= link_to "Favoris", "#", class: "btn btn-gradient btnlinks btn-user" %>
-          <%= link_to "Creations", "creations", class: "btn btn-gradient btnlinks btn-user" %>
+          <%= link_to "Creations", "#", class: "btn btn-gradient btnlinks btn-user" %>
           <%= link_to "Materiels", "#", class: "btn btn-gradient btnlinks btn-user" %>
+          <div class="mon-bouton-recherche">
+            <a href="/creations">Recherche</a>
+          </div>
         </div>
       </div>
       <div class="d-flex" style="width: 85%; min-height: 100vh; margin-left:16px">
