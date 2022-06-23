@@ -1,20 +1,14 @@
 <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
-    <div class="carousel-item active">
-      <%= cl_image_tag @creation.photos[0].key, class: "d-block w-100" %>
-    </div>
-    <div class="carousel-item">
-      <%= cl_image_tag @creation.photos[1].key, class: "d-block w-100 " %>
-    </div>
-    <div class="carousel-item">
-      <%= cl_image_tag @creation.photos[2].key, class: "d-block w-100" %>
-    </div>
-    <div class="carousel-item">
-        <%= cl_image_tag @creation.photos[3].key, class: "d-block w-100" %>
-    </div>
-    <div class="carousel-item">
-        <%= cl_image_tag @creation.photos[4].key, class: "d-block w-100" %>
-    </div>
+    <% (0...5).each do |i| %>
+      <% if i == 0 %>
+        <div class="carousel-item active">
+      <% else %>
+        <div class="carousel-item">
+      <% end %>
+        <%= cl_image_tag @creation.photos[i].key, height: 450, width: 550, crop: :fill, class: "d-block w-100" %>
+      </div>
+    <% end %>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -32,13 +26,11 @@
 
   <div class="title">
     <h1><%= @creation.name %></h1>
+    <div class="favori-show">
+      <%= render 'shared/like_button', creation: @creation %>
+    </div>
     <p>Temps de réalisation : <%= @creation.time %> Heure(s)</p>
   </div>
-
-  <div class="favori">
-    <%= render 'shared/like_button', creation: @creation %>
-  </div>
-
 
   <div class="patron">
     <div class="mon-bouton-recherche">
