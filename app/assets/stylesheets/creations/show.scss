@@ -8,7 +8,12 @@
   background-color:#FFFCFC;
 }
 
-
+.favori {
+  position: absolute;
+  top: 300px;
+  left: 50px;
+  font-size: 30px;
+}
 
 .picture-container{
   width: 100%;
@@ -30,8 +35,7 @@
   margin-bottom: 32px;
   h1 {
     font-size: 64px;
-
-}
+  }
 }
 .patron {
   width: 100%;
@@ -89,9 +93,16 @@
 
 .notice {
   width: 100%;
-  display: flex;
-  justify-content: center;
+  // display: flex;
+  // justify-content: center;
   padding-top: 24px;
+}
+
+.lespdf {
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
 // #list-materiels{

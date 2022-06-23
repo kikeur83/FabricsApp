@@ -6,14 +6,15 @@
     <div class="carousel-item">
       <%= cl_image_tag @creation.photos[1].key, class: "d-block w-100 " %>
     </div>
-  <div class="carousel-item">
-    <%= cl_image_tag @creation.photos[2].key, class: "d-block w-100" %>
-  </div>
-  <div class="carousel-item">
-      <%= cl_image_tag @creation.photos[3].key, class: "d-block w-100" %>
-  </div>
-  <div class="carousel-item">
-      <%= cl_image_tag @creation.photos[4].key, class: "d-block w-100" %>
+    <div class="carousel-item">
+      <%= cl_image_tag @creation.photos[2].key, class: "d-block w-100" %>
+    </div>
+    <div class="carousel-item">
+        <%= cl_image_tag @creation.photos[3].key, class: "d-block w-100" %>
+    </div>
+    <div class="carousel-item">
+        <%= cl_image_tag @creation.photos[4].key, class: "d-block w-100" %>
+    </div>
   </div>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
@@ -28,13 +29,14 @@
 
 <div class="main-container">
 
+  <button class="to-top">Top</button>
 
   <div class="title">
     <h1><%= @creation.name %></h1>
     <p>Temps de réalisation : <%= @creation.time %> Heure(s)</p>
   </div>
 
-   <div>
+  <div class="favori">
     <%= render 'shared/like_button', creation: @creation %>
   </div>
 
@@ -58,11 +60,13 @@
     <% end %>
   </div>
 
-
-
-
-
+  <div class="bouton-top"></div>
   <div class="notice">
+    <div class="lespdf">
+      <% @creation.photos.drop(5).each do |photo| %>
+        <%= cl_image_tag photo.key, height: 1052, width: 744 %>
+      <% end %>
+    </div>
     <div class="mon-bouton-recherche">
       <%= link_to "Télecharger notice", asset_path(@creation.notice_pdf), target: :_blank %>
     </div>
