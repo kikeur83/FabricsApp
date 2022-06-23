@@ -1,9 +1,10 @@
 .mon-bouton-recherche {
-
- box-shadow:inset 0px 1px 0px 0px #f5978e;
+  box-shadow: 2px 2px 2px 2px rgb(235, 206, 206);
   background-color:#f24537;
   border-radius:6px;
-  border:1px solid #d02718;
+  border:2px white;
+  border-style: dashed;
+
   display:inline-block;
   cursor:pointer;
   color:#ffffff;

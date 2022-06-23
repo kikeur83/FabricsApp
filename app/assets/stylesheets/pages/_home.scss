@@ -27,10 +27,11 @@
 }
 
 .btn-recherche {
-  box-shadow:inset 0px 1px 0px 0px #f5978e;
+  box-shadow: 2px 2px 2px 2px rgb(235, 206, 206);
   background-color:#f24537;
   border-radius:6px;
-  border:1px solid #d02718;
+  border:2px #F5D8D8;
+  border-style: dashed;
   display:inline-block;
   cursor:pointer;
   color:#ffffff;
@@ -40,6 +41,7 @@
   padding:16px 54px;
   text-decoration:none;
   text-shadow:0px 1px 0px #810e05;
+
   // position: relative;
   // top: 150px;
   // right: 500px;
@@ -102,3 +104,4 @@
   width: 517px;
   text-align: start;
 }
+
