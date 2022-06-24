@@ -76,11 +76,14 @@
 }
 
 .present3 {
+
   display: flex;
   justify-content: space-around;
   margin-top: 32px;
   margin-bottom: 32px;
   align-items: center;
+
+
   // div{border: 2px solid #f5978e;;
   //   border-radius: 5px;
   //   box-shadow: 2px 2px 2px #f5978e;;
@@ -97,6 +100,8 @@
 }
 
 .present-text {
+  border-bottom: 8px dashed rgb(235, 206, 206);
+
   width: 50%;
 }
 

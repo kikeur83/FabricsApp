@@ -8,7 +8,7 @@
   height: 400px;
   background: image-url("mdc.jpg");
   background-size: cover;
-
+  // border-bottom: 8px dashed rgb(235, 206, 206);
 }
 
 .to-top {
@@ -115,6 +115,7 @@
 }
 
 .card-container {
+
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
