@@ -1,11 +1,12 @@
 .main-container {
   // position: relative;
+  border-top: 8px dashed rgb(235, 206, 206);
   width: 100%;
   min-height: 100vh;
   // align-items: flex-start;
   // justify-content: flex;
   text-align: center;
-  background-color:#FFFCFC;
+  background-image: url(background_g.jpg);
 }
 
 .carousel {
